@@ -1,0 +1,110 @@
+/* NAVLYS FAMILY THEME v2 — Ice Blue respirant PARTOUT (BM 28 mai) */
+
+:root{
+  --nv-noir:#02040a;--nv-noir2:#080b10;
+  --nv-bronze:#B87333;--nv-bronze-clair:#D49B5B;
+  --nv-or:#C9A961;--nv-or-pale:#f3e4c4;
+  --nv-ice:#7DD3FC;--nv-ice-clair:#a8e3ff;--nv-ice-deep:#3a8db5;
+  --nv-perle:#e7eef2;--nv-perle-doux:#bcc9d1;--nv-brume:#7c8b95;
+}
+
+html{background:#02040a !important}
+body{background:transparent !important; -webkit-text-size-adjust:100% !important}
+
+/* === SECTIONS RESPIRENT EN ICE BLUE === */
+section, article, aside, .section, .block,
+.bp-partners, .bp-faq, .bp-products, .bp-journal{
+  background:rgba(2,4,10,0.55) !important;
+  backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px);
+  border-top:1px solid rgba(125,211,252,0.08) !important;
+}
+
+header, .hero, .hero-section, [class*="hero"]{
+  background:transparent !important;
+}
+
+/* === TOUTES LES CARDS RESPIRENT === */
+.card, .pricing-card, .feature-card, .prod-card, .part-card, .met-card,
+.faq-item, .journal-card, .contact-block,
+[class*="card"]:not(.coin-face):not(.fam-card):not(.cdblk):not(.bp-coin-face){
+  background:rgba(2,4,10,0.68) !important;
+  border:1px solid rgba(125,211,252,0.25) !important;
+  border-radius:14px !important;
+  box-shadow:0 0 18px rgba(125,211,252,0.10),0 0 40px rgba(125,211,252,0.05) !important;
+  animation:nv-card-breath 5s ease-in-out infinite alternate !important;
+  transition:all .4s ease !important;
+}
+@keyframes nv-card-breath{
+  0%{box-shadow:0 0 12px rgba(125,211,252,0.08),0 0 30px rgba(125,211,252,0.04)}
+  100%{box-shadow:0 0 22px rgba(125,211,252,0.18),0 0 50px rgba(125,211,252,0.10)}
+}
+.card:hover, .prod-card:hover, .part-card:hover, .met-card:hover,
+.faq-item:hover, .journal-card:hover{
+  border-color:rgba(125,211,252,0.6) !important;
+  transform:translateY(-3px);
+  box-shadow:0 14px 42px rgba(125,211,252,0.25),0 0 70px rgba(125,211,252,0.15) !important;
+}
+
+/* Cards "own" en bronze breathing */
+.prod-card, .part-card.own, .fam-card{
+  animation:nv-card-breath-bronze 5s ease-in-out infinite alternate !important;
+}
+@keyframes nv-card-breath-bronze{
+  0%{box-shadow:0 0 14px rgba(184,115,51,0.10),0 0 32px rgba(184,115,51,0.05)}
+  100%{box-shadow:0 0 26px rgba(184,115,51,0.22),0 0 56px rgba(184,115,51,0.13)}
+}
+
+/* === BOUTONS ICE BLUE BREATHING === */
+.btn, button, .cta, [class*="btn-primary"]{
+  font-family:'Cinzel',serif !important;
+  letter-spacing:.18em !important;
+  text-transform:uppercase !important;
+  border-radius:10px !important;
+  transition:all .3s ease !important;
+}
+.btn.primary, .cta-primary, button.primary, [class*="btn-primary"],
+.bp-btn-row a:first-child{
+  background:linear-gradient(135deg, var(--nv-bronze), var(--nv-bronze-clair)) !important;
+  color:white !important;
+  border:none !important;
+  box-shadow:0 8px 28px rgba(184,115,51,0.35),0 0 16px rgba(125,211,252,0.15) !important;
+}
+.btn.primary:hover{transform:translateY(-2px);box-shadow:0 14px 42px rgba(184,115,51,0.55),0 0 32px rgba(125,211,252,0.3) !important}
+
+/* === TITRES + TEXTE === */
+h1, h2, h3{font-family:'Cormorant Garamond', Georgia, serif !important; color:var(--nv-perle) !important}
+h1 em, h2 em, h3 em{color:var(--nv-or) !important; font-style:italic !important}
+body, p{color:var(--nv-perle-doux) !important; font-family:'Cormorant Garamond', Georgia, serif !important}
+
+/* === LIENS === */
+a:not(.btn):not([class*="card"]):not(.fam-bar a):not(.nv-prelude){
+  color:var(--nv-ice-clair) !important;
+  transition:color .3s ease;
+}
+a:not(.btn):hover{color:var(--nv-or-pale) !important}
+
+/* === BREATHING UNIVERSEL pour tout ce qui a une bordure === */
+[class*="breath"], .glow, .highlight{
+  animation:nv-glow-breath 4s ease-in-out infinite alternate !important;
+}
+@keyframes nv-glow-breath{
+  0%{box-shadow:0 0 16px rgba(125,211,252,0.18)}
+  100%{box-shadow:0 0 32px rgba(125,211,252,0.42),0 0 70px rgba(125,211,252,0.18)}
+}
+
+/* === SLIDESHOW BG === */
+.nv-hero-bg-slide.active{opacity:.46 !important}
+.nv-hero-bg-vignette{background:radial-gradient(ellipse at center,transparent 25%,rgba(2,4,10,0.7) 75%,rgba(2,4,10,0.92) 100%) !important}
+
+/* === ACCESSIBILITY base === */
+button:focus-visible, a:focus-visible{outline:2px solid var(--nv-ice) !important; outline-offset:3px !important}
+*:focus-visible{outline-color:var(--nv-ice) !important}
+
+/* === Inline icons subtle breathing === */
+.fam-bar a.current, .badge-item{
+  animation:nv-soft-breath 4s ease-in-out infinite alternate;
+}
+@keyframes nv-soft-breath{
+  0%{box-shadow:0 0 6px rgba(125,211,252,0.15)}
+  100%{box-shadow:0 0 14px rgba(125,211,252,0.4),0 0 24px rgba(184,115,51,0.18)}
+}
