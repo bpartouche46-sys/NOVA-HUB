@@ -1,0 +1,45 @@
+name: Sites check
+
+# Vérification légère adaptée à des sites statiques (HTML/CSS/JS navigateur).
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup repo
+        uses: actions/checkout@v4
+
+      - name: Vérifier la présence du socle partagé
+        run: |
+          set -e
+          for f in \
+            sites/_shared/navlys-family-theme.css \
+            sites/_shared/hero-bg-slideshow.js \
+            sites/_shared/navlys-fond.js \
+            sites/brunopartouche/biographie.html ; do
+            test -f "$f" && echo "OK   $f" || { echo "MANQUE $f"; exit 1; }
+          done
+
+      - name: Vérifier que NAVBIO a bien été renommé en NAVLYS NEXT GEN
+        run: |
+          if grep -rln --include='*.html' -e 'NAVBIO' sites/ ; then
+            echo "::error::Occurrence(s) de 'NAVBIO' restante(s) — renommer en 'NAVLYS NEXT GEN'."
+            exit 1
+          fi
+          echo "Aucune occurrence de NAVBIO. OK."
+
+      - name: Validation HTML basique (balises <html> et </html>)
+        run: |
+          set -e
+          while IFS= read -r f; do
+            grep -qi '<html' "$f" && grep -qi '</html>' "$f" \
+              && echo "OK   $f" || { echo "HTML invalide: $f"; exit 1; }
+          done < <(find sites -name '*.html')
