@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NAVLYS · La méthode 90/10 pour investir avec discipline</title>
+<meta name="description" content="NAVLYS — investir comme on navigue : 90% en forteresse (ETF monde, DCA, patience), 10% en capital plaisir. Méthode, discipline, exécution via Alpaca.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=Fraunces:ital,wght@1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="../_shared/navlys-family-theme.css">
+<style>
+:root{--ice:#7DD3FC;--ice-bright:#BAE6FD;--ice-deep:#0EA5E9}
+*{box-sizing:border-box}html,body{margin:0;padding:0;background:#000;color:#f0ebdc;font-family:'Inter',sans-serif;overflow-x:hidden}
+.serif{font-family:'Cormorant Garamond',serif}.italic-elegant{font-family:'Fraunces',serif;font-style:italic}.mono{font-family:'JetBrains Mono',monospace}
+.ice-text{background:linear-gradient(180deg,var(--ice-bright) 0%,var(--ice) 50%,var(--ice-deep) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.glass{background:linear-gradient(180deg,rgba(125,211,252,.05) 0%,rgba(0,0,0,.6) 100%);backdrop-filter:blur(20px);border:1px solid rgba(125,211,252,.2);border-radius:18px}
+.btn-ice{background:linear-gradient(180deg,var(--ice) 0%,var(--ice-deep) 100%);color:#000;font-weight:600;display:inline-block}
+.btn-ghost{border:1px solid rgba(125,211,252,.4);color:var(--ice-bright);display:inline-block}
+.nav-blur{backdrop-filter:blur(16px);background:rgba(0,0,0,.7);border-bottom:1px solid rgba(125,211,252,.1)}
+.ratio-bar{height:14px;border-radius:99px;background:rgba(125,211,252,.12);overflow:hidden}
+.ratio-90{height:100%;width:90%;background:linear-gradient(90deg,var(--ice-deep),var(--ice))}
+.wa-float{position:fixed;bottom:24px;right:24px;width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(37,211,102,.4);z-index:100}
+</style></head><body>
+
+<nav class="fixed top-0 inset-x-0 z-50 nav-blur"><div class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between"><a href="/" class="serif text-2xl font-semibold ice-text tracking-wide">NAVLYS</a><div class="hidden md:flex items-center gap-6 text-sm text-stone-300"><a href="/methode" class="hover:text-sky-300">La méthode</a><a href="/tarifs" class="hover:text-sky-300">Tarifs</a><a href="/alpaca" class="hover:text-sky-300">Alpaca</a></div><a href="/tarifs" class="btn-ice px-4 py-2 rounded-lg text-sm">Commencer</a></div></nav>
+
+<header class="relative z-10 pt-36 pb-20 px-5 text-center"><div class="max-w-4xl mx-auto">
+<p class="uppercase tracking-[0.35em] text-[11px] text-sky-300/70 mb-5">Investir comme on navigue</p>
+<h1 class="serif text-5xl md:text-7xl ice-text leading-tight mb-6">La méthode 90/10.</h1>
+<p class="italic-elegant text-2xl text-sky-300/80 mb-4">90% en forteresse. 10% en capital plaisir.</p>
+<p class="text-stone-300 max-w-2xl mx-auto leading-relaxed mb-10">Pas de promesse de gain. Une discipline. On garde le cap (ETF monde, DCA, patience), et on garde de la munition pour les vraies occasions. Le crash devient un allié quand on est en DCA.</p>
+<div class="flex flex-wrap gap-3 justify-center"><a href="/methode" class="btn-ice px-7 py-3 rounded-xl">Découvrir la méthode</a><a href="/tarifs" class="btn-ghost px-7 py-3 rounded-xl">Voir les formules</a></div>
+</div></header>
+
+<section class="relative z-10 px-5 py-12 max-w-4xl mx-auto">
+<div class="glass p-8">
+<div class="flex items-center justify-between mb-2"><span class="mono text-sky-300 text-sm">FORTERESSE</span><span class="mono text-stone-400 text-sm">90%</span></div>
+<div class="ratio-bar mb-2"><div class="ratio-90"></div></div>
+<p class="text-stone-400 text-sm mb-6">ETF mondial diversifié · investissement programmé (DCA) · horizon long · on ne vend pas dans la tempête.</p>
+<div class="flex items-center justify-between mb-2"><span class="mono text-sky-300 text-sm">CAPITAL PLAISIR</span><span class="mono text-stone-400 text-sm">10%</span></div>
+<div class="ratio-bar mb-2"><div style="height:100%;width:10%;background:linear-gradient(90deg,#f59e0b,#fbbf24)"></div></div>
+<p class="text-stone-400 text-sm">Positions ciblées · stop discipliné · on accepte de perdre cette part sans jamais toucher à la forteresse.</p>
+</div>
+</section>
+
+<section class="relative z-10 px-5 py-12 max-w-6xl mx-auto grid md:grid-cols-3 gap-5">
+<div class="glass p-7"><div class="serif text-3xl ice-text mb-2">01</div><h3 class="serif text-xl text-stone-100 mb-2">Lire avant d'agir</h3><p class="text-stone-400 text-sm leading-relaxed">On n'achète pas contre le vent. Marge de sécurité par défaut, timing patient. La patience active n'est pas de l'inaction.</p></div>
+<div class="glass p-7"><div class="serif text-3xl ice-text mb-2">02</div><h3 class="serif text-xl text-stone-100 mb-2">Automatiser la forteresse</h3><p class="text-stone-400 text-sm leading-relaxed">DCA programmé, sans émotion. Chaque mois, le même geste. La régularité bat le génie du timing.</p></div>
+<div class="glass p-7"><div class="serif text-3xl ice-text mb-2">03</div><h3 class="serif text-xl text-stone-100 mb-2">Exécuter proprement</h3><p class="text-stone-400 text-sm leading-relaxed">Le 10% s'exécute via <a href="/alpaca" class="text-sky-300 underline">Alpaca</a> : ordres clairs, stops définis à l'avance, journal de bord.</p></div>
+</section>
+
+<section class="relative z-10 px-5 py-16 text-center max-w-3xl mx-auto">
+<h2 class="serif text-4xl ice-text mb-4">Prêt à garder le cap ?</h2>
+<p class="text-stone-300 mb-8 italic-elegant text-lg">Choisis ta formule. La discipline s'apprend, le cap se tient.</p>
+<a href="/tarifs" class="btn-ice px-8 py-3 rounded-xl">Voir les tarifs</a>
+</section>
+
+<footer class="relative z-10 px-5 py-12 border-t border-sky-300/10 mt-8 max-w-6xl mx-auto text-stone-500 text-xs flex flex-wrap gap-4 justify-between">
+<p>© 2026 NAVLYS — Tous droits réservés.</p>
+<p class="max-w-xl text-stone-600">Information éducative — pas un conseil en investissement. Tout placement comporte un risque de perte en capital.</p>
+</footer>
+
+<a href="https://wa.me/972537082746" class="wa-float"><svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/></svg></a>
+<script src="../_shared/navlys-fond.js" data-video="/assets/navlys-bateau.mp4" data-ecusson="/assets/ecusson.png" data-poster="/assets/bg-1.jpg"></script>
+</body></html>

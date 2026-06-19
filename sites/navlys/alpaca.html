@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alpaca · Exécuter la méthode NAVLYS</title>
+<meta name="description" content="Pourquoi NAVLYS utilise Alpaca pour exécuter le 10% capital plaisir : ordres clairs, stops à l'avance, API. Guide d'ouverture pas à pas.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=Fraunces:ital,wght@1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="../_shared/navlys-family-theme.css">
+<style>
+:root{--ice:#7DD3FC;--ice-bright:#BAE6FD;--ice-deep:#0EA5E9}
+*{box-sizing:border-box}html,body{margin:0;padding:0;background:#000;color:#f0ebdc;font-family:'Inter',sans-serif;overflow-x:hidden}
+.serif{font-family:'Cormorant Garamond',serif}.italic-elegant{font-family:'Fraunces',serif;font-style:italic}.mono{font-family:'JetBrains Mono',monospace}
+.ice-text{background:linear-gradient(180deg,var(--ice-bright) 0%,var(--ice) 50%,var(--ice-deep) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.glass{background:linear-gradient(180deg,rgba(125,211,252,.05) 0%,rgba(0,0,0,.6) 100%);backdrop-filter:blur(20px);border:1px solid rgba(125,211,252,.2);border-radius:18px}
+.btn-ice{background:linear-gradient(180deg,var(--ice) 0%,var(--ice-deep) 100%);color:#000;font-weight:600;display:inline-block}
+.btn-ghost{border:1px solid rgba(125,211,252,.4);color:var(--ice-bright);display:inline-block}
+.nav-blur{backdrop-filter:blur(16px);background:rgba(0,0,0,.7);border-bottom:1px solid rgba(125,211,252,.1)}
+.num{width:38px;height:38px;border-radius:50%;background:linear-gradient(180deg,var(--ice),var(--ice-deep));color:#000;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0}
+.wa-float{position:fixed;bottom:24px;right:24px;width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(37,211,102,.4);z-index:100}
+</style></head><body>
+
+<nav class="fixed top-0 inset-x-0 z-50 nav-blur"><div class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between"><a href="/" class="serif text-2xl font-semibold ice-text tracking-wide">NAVLYS</a><div class="hidden md:flex items-center gap-6 text-sm text-stone-300"><a href="/methode" class="hover:text-sky-300">La méthode</a><a href="/tarifs" class="hover:text-sky-300">Tarifs</a><a href="/alpaca" class="text-sky-300">Alpaca</a></div><a href="/tarifs" class="btn-ice px-4 py-2 rounded-lg text-sm">Commencer</a></div></nav>
+
+<main class="relative z-10 pt-28 px-5 py-16 max-w-3xl mx-auto">
+<p class="uppercase tracking-[0.3em] text-[11px] text-sky-300/70 mb-3">Exécution</p>
+<h1 class="serif text-5xl md:text-6xl ice-text mb-4">Alpaca.</h1>
+<p class="italic-elegant text-xl text-sky-300/80 mb-10">Le courtier qu'on utilise pour exécuter proprement le 10% capital plaisir.</p>
+
+<section class="glass p-7 mb-6">
+<h2 class="serif text-2xl text-stone-100 mb-3">Pourquoi Alpaca ?</h2>
+<ul class="space-y-3 text-stone-300 text-sm">
+<li><span class="text-sky-300">▹</span> <b>Ordres clairs.</b> Achat, vente, stop : tout est explicite, sans friction inutile.</li>
+<li><span class="text-sky-300">▹</span> <b>Stop défini à l'avance.</b> On programme la sortie avant d'entrer — la règle d'or du capital plaisir.</li>
+<li><span class="text-sky-300">▹</span> <b>API ouverte.</b> Pour qui veut automatiser et journaliser ses ordres proprement.</li>
+<li><span class="text-sky-300">▹</span> <b>Sans confusion avec la forteresse.</b> Le 90% reste sur ton plan long terme ; Alpaca sert le 10% d'exploration.</li>
+</ul>
+</section>
+
+<section class="mb-6">
+<h2 class="serif text-3xl ice-text mb-5">Ouvrir son compte, pas à pas</h2>
+<div class="space-y-4">
+<div class="glass p-5 flex gap-4 items-start"><div class="num">1</div><div><p class="text-stone-100 font-medium">Créer le compte</p><p class="text-stone-400 text-sm">Inscription sur le site officiel d'Alpaca, vérification d'identité (KYC) classique.</p></div></div>
+<div class="glass p-5 flex gap-4 items-start"><div class="num">2</div><div><p class="text-stone-100 font-medium">Commencer en « paper trading »</p><p class="text-stone-400 text-sm">Mode simulation : on s'entraîne aux ordres et aux stops sans risquer un euro. On valide la discipline d'abord.</p></div></div>
+<div class="glass p-5 flex gap-4 items-start"><div class="num">3</div><div><p class="text-stone-100 font-medium">Définir ses règles</p><p class="text-stone-400 text-sm">Taille de position, stop, objectif — écrits dans le journal de bord avant le premier ordre réel.</p></div></div>
+<div class="glass p-5 flex gap-4 items-start"><div class="num">4</div><div><p class="text-stone-100 font-medium">Passer en réel, petit</p><p class="text-stone-400 text-sm">On démarre avec une fraction du 10%. On augmente seulement quand la discipline est prouvée, pas l'inverse.</p></div></div>
+</div>
+</section>
+
+<section class="glass p-6 mb-10 border-amber-400/30">
+<p class="text-stone-300 text-sm leading-relaxed"><b class="text-amber-200">Important.</b> NAVLYS n'est pas affilié à Alpaca et ne reçoit pas tes fonds. Vérifie l'éligibilité d'Alpaca dans ton pays de résidence et lis ses conditions. Ceci est une information éducative, pas un conseil en investissement.</p>
+</section>
+
+<div class="text-center"><a href="/methode" class="btn-ghost px-7 py-3 rounded-xl mr-2">Revoir la méthode</a><a href="/tarifs" class="btn-ice px-7 py-3 rounded-xl">Être accompagné</a></div>
+</main>
+
+<footer class="relative z-10 px-5 py-12 border-t border-sky-300/10 mt-8 max-w-6xl mx-auto text-stone-500 text-xs flex flex-wrap gap-4 justify-between">
+<p>© 2026 NAVLYS — Tous droits réservés.</p>
+<p class="max-w-xl text-stone-600">Information éducative — pas un conseil en investissement. Tout placement comporte un risque de perte en capital.</p>
+</footer>
+
+<a href="https://wa.me/972537082746" class="wa-float"><svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/></svg></a>
+<script src="../_shared/navlys-fond.js" data-video="/assets/navlys-bateau.mp4" data-ecusson="/assets/ecusson.png" data-poster="/assets/bg-1.jpg"></script>
+</body></html>
