@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NAVLYS NEXT GEN · La mémoire vivante</title>
+<meta name="description" content="NAVLYS NEXT GEN — l'application de biographie vivante. Transforme photos, voix et documents en récit structuré. Tes contenus restent à toi, chiffrés. Paiement unique à vie.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=Fraunces:ital,wght@1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="../_shared/navlys-family-theme.css">
+<style>
+:root{--ice:#7DD3FC;--ice-bright:#BAE6FD;--ice-deep:#0EA5E9}
+*{box-sizing:border-box}html,body{margin:0;padding:0;background:#000;color:#f0ebdc;font-family:'Inter',sans-serif;overflow-x:hidden}
+.serif{font-family:'Cormorant Garamond',serif}.italic-elegant{font-family:'Fraunces',serif;font-style:italic}.mono{font-family:'JetBrains Mono',monospace}
+.ice-text{background:linear-gradient(180deg,var(--ice-bright) 0%,var(--ice) 50%,var(--ice-deep) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.glass{background:linear-gradient(180deg,rgba(125,211,252,.05) 0%,rgba(0,0,0,.6) 100%);backdrop-filter:blur(20px);border:1px solid rgba(125,211,252,.2);border-radius:18px}
+.glass-hot{background:linear-gradient(180deg,rgba(125,211,252,.12) 0%,rgba(0,0,0,.55) 100%);border:1.5px solid var(--ice);border-radius:18px}
+.btn-ice{background:linear-gradient(180deg,var(--ice) 0%,var(--ice-deep) 100%);color:#000;font-weight:600;display:inline-block}
+.btn-outline{border:1px solid rgba(125,211,252,.4);color:var(--ice-bright);display:inline-block}
+.nav-blur{backdrop-filter:blur(16px);background:rgba(0,0,0,.7);border-bottom:1px solid rgba(125,211,252,.1)}
+.check{color:var(--ice)}
+.wa-float{position:fixed;bottom:24px;right:24px;width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(37,211,102,.4);z-index:100}
+</style></head><body>
+
+<nav class="fixed top-0 inset-x-0 z-50 nav-blur"><div class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between"><a href="/" class="serif text-xl font-semibold ice-text">Bruno Mark Partouche</a><div class="hidden md:flex items-center gap-6 text-sm text-stone-300"><a href="/biographie" class="hover:text-sky-300">Biographie</a><a href="/parcours" class="hover:text-sky-300">Parcours</a><a href="/univers" class="hover:text-sky-300">Univers</a><a href="/navlys-next-gen" class="text-sky-300">NAVLYS NEXT GEN</a><a href="/journal" class="hover:text-sky-300">Journal</a></div><a href="#paliers" class="btn-ice px-4 py-2 rounded-lg text-sm">Commencer ma bio</a></div></nav>
+
+<header class="relative z-10 pt-36 pb-16 px-5 text-center"><div class="max-w-3xl mx-auto">
+<p class="uppercase tracking-[0.35em] text-[11px] text-sky-300/70 mb-5">Biographie vivante</p>
+<h1 class="serif text-5xl md:text-7xl ice-text leading-tight mb-6">NAVLYS NEXT GEN.</h1>
+<p class="italic-elegant text-2xl text-sky-300/80 mb-4">Ta vie vaut de l'or. Garde-la. Transmets-la.</p>
+<p class="text-stone-300 max-w-2xl mx-auto leading-relaxed mb-10">L'application qui transforme tes photos, ta voix, tes vidéos et tes documents épars en un <b>récit structuré, fidèle aux faits</b>. Ce site lui-même en est une démonstration.</p>
+<div class="flex flex-wrap gap-3 justify-center"><a href="#paliers" class="btn-ice px-7 py-3 rounded-xl">Voir les formules</a><a href="/biographie" class="btn-outline px-7 py-3 rounded-xl">Voir un exemple (ma bio)</a></div>
+</div></header>
+
+<section class="relative z-10 px-5 py-12 max-w-6xl mx-auto grid md:grid-cols-3 gap-5">
+<div class="glass p-7"><div class="serif text-3xl ice-text mb-2">①</div><h3 class="serif text-xl text-stone-100 mb-2">Tu racontes</h3><p class="text-stone-400 text-sm leading-relaxed">À l'écrit ou à la voix, chapitre par chapitre. Tu déposes photos, vidéos, anecdotes, documents.</p></div>
+<div class="glass p-7"><div class="serif text-3xl ice-text mb-2">②</div><h3 class="serif text-xl text-stone-100 mb-2">L'IA structure</h3><p class="text-stone-400 text-sm leading-relaxed">Les souvenirs épars deviennent un récit clair et ordonné — toujours respectueux des faits, jamais inventé.</p></div>
+<div class="glass p-7"><div class="serif text-3xl ice-text mb-2">③</div><h3 class="serif text-xl text-stone-100 mb-2">Tu transmets</h3><p class="text-stone-400 text-sm leading-relaxed">Un livre de vie à partager avec les tiens. Le tien, pour toujours.</p></div>
+</section>
+
+<section id="paliers" class="relative z-10 px-5 py-12 max-w-6xl mx-auto">
+<div class="text-center mb-10"><h2 class="serif text-4xl ice-text mb-3">Quatre paliers, paiement unique à vie.</h2><p class="italic-elegant text-lg text-sky-300/80">Pas d'abonnement. Tu payes une fois, c'est à toi pour toujours.</p></div>
+<div class="grid md:grid-cols-4 gap-4">
+<div class="glass p-6 flex flex-col"><p class="mono text-sky-300 text-sm mb-1">BIO UNIQUE</p><p class="text-stone-500 text-sm mb-4 flex-1">Une biographie, la tienne, du début à la fin.</p><a href="https://wa.me/972537082746" class="btn-outline px-4 py-2 rounded-lg text-center text-sm">Choisir</a></div>
+<div class="glass-hot p-6 flex flex-col relative"><span class="absolute -top-3 left-1/2 -translate-x-1/2 mono text-[11px] bg-sky-300 text-black px-3 py-1 rounded-full">POPULAIRE</span><p class="mono text-sky-300 text-sm mb-1">FAMILLE</p><p class="text-stone-400 text-sm mb-4 flex-1">Plusieurs récits, plusieurs membres. La mémoire d'une lignée.</p><a href="https://wa.me/972537082746" class="btn-ice px-4 py-2 rounded-lg text-center text-sm">Choisir</a></div>
+<div class="glass p-6 flex flex-col"><p class="mono text-sky-300 text-sm mb-1">INFINITE</p><p class="text-stone-500 text-sm mb-4 flex-1">Sans limite de récits ni de contenus. Pour les grandes histoires.</p><a href="https://wa.me/972537082746" class="btn-outline px-4 py-2 rounded-lg text-center text-sm">Choisir</a></div>
+<div class="glass p-6 flex flex-col"><p class="mono text-sky-300 text-sm mb-1">PRO</p><p class="text-stone-500 text-sm mb-4 flex-1">Pour biographes, maisons d'édition, professionnels de la mémoire.</p><a href="https://wa.me/972537082746" class="btn-outline px-4 py-2 rounded-lg text-center text-sm">Nous contacter</a></div>
+</div>
+<p class="text-center text-stone-600 text-xs mt-6 italic-elegant">Tarifs précis communiqués au lancement. Paiement unique, sans engagement récurrent.</p>
+</section>
+
+<section class="relative z-10 px-5 py-12 max-w-3xl mx-auto">
+<div class="glass p-7">
+<h2 class="serif text-3xl ice-text mb-4">Tes souvenirs t'appartiennent</h2>
+<ul class="space-y-3 text-stone-300 text-sm">
+<li><span class="check">✓</span> <b>Chiffrement AES-256.</b> Tes contenus sont protégés.</li>
+<li><span class="check">✓</span> <b>Local-first.</b> Tu gardes la maîtrise de tes données et de tes clés.</li>
+<li><span class="check">✓</span> <b>Jamais exploités commercialement</b> par DFENSER — ni revendus, ni cédés.</li>
+<li><span class="check">✓</span> <b>Fidélité aux faits.</b> L'IA met en forme, elle n'invente pas ta vie.</li>
+</ul>
+</div>
+</section>
+
+<section class="relative z-10 px-5 py-16 text-center max-w-3xl mx-auto">
+<h2 class="serif text-4xl ice-text mb-4">Prêt à écrire ta vie ?</h2>
+<p class="text-stone-300 mb-8 italic-elegant text-lg">On en parle en direct, sans engagement.</p>
+<a href="https://wa.me/972537082746" class="btn-ice px-8 py-3 rounded-xl">Démarrer sur WhatsApp</a>
+</section>
+
+<footer class="px-5 py-12 border-t border-sky-300/10 mt-8 max-w-6xl mx-auto text-stone-500 text-xs">
+<p>© 2026 Bruno Mark Partouche · DFENSER — Tous droits réservés.</p>
+</footer>
+
+<a href="https://wa.me/972537082746" class="wa-float"><svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/></svg></a>
+
+<script src="../_shared/navlys-fond.js" data-video="/assets/navlys-bateau.mp4" data-ecusson="/assets/ecusson.png" data-poster="/assets/bg-1.jpg"></script>
+</body></html>
