@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Démo animée · Bruno Mark Partouche</title>
+<meta name="description" content="Maquette animée : vidéos en cadres, apparition au scroll, offre toujours visible. Style brunopartouche.com.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2302040a'/><text x='16' y='23' font-size='19' text-anchor='middle' fill='%237DD3FC' font-family='Georgia,serif'>B</text></svg>">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Démo animée · Bruno Mark Partouche">
+<meta property="og:description" content="Vidéos en cadres, apparition au scroll, offre toujours visible.">
+<meta property="og:url" content="https://brunopartouche.com/demo-animee">
+<meta property="og:image" content="https://brunopartouche.com/assets/bg-1.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://brunopartouche.com/demo-animee">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--noir:#02040a;--noir2:#070b12;--bronze:#B87333;--bronze-clair:#D49B5B;--or:#C9A961;--or-pale:#f3e4c4;--ice:#7DD3FC;--ice-clair:#a8e3ff;--perle:#e7eef2;--perle-doux:#bcc9d1;--brume:#7c8b95}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--noir)}
+body{font-family:'Inter',sans-serif;color:var(--perle);background:var(--noir);line-height:1.6;overflow-x:hidden;-webkit-text-size-adjust:100%}
+.serif{font-family:'Cormorant Garamond',serif}.cinzel{font-family:'Cinzel',serif}.mono{font-family:'JetBrains Mono',monospace}
+/* fond cosmique discret */
+.bg{position:fixed;inset:0;z-index:-2;background:radial-gradient(820px 560px at 86% -8%,rgba(233,211,160,.10),transparent 60%),radial-gradient(760px 560px at 5% 6%,rgba(125,211,252,.12),transparent 60%),radial-gradient(1000px 820px at 50% 122%,rgba(184,115,51,.20),transparent 64%),var(--noir)}
+
+/* ===== OFFRE STICKY (toujours visible) ===== */
+.offer-bar{position:fixed;top:0;left:0;right:0;z-index:90;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;
+  padding:11px 16px;background:rgba(2,4,10,.86);backdrop-filter:blur(16px);border-bottom:1px solid rgba(125,211,252,.22);
+  animation:barpulse 5s ease-in-out infinite alternate}
+@keyframes barpulse{0%{box-shadow:0 0 14px rgba(125,211,252,.10)}100%{box-shadow:0 6px 30px rgba(125,211,252,.30)}}
+.offer-bar .txt{font-family:'Cormorant Garamond',serif;font-size:clamp(15px,2.4vw,19px);color:var(--or-pale)}
+.offer-bar .txt b{color:#fff}
+.offer-bar .cta{font-family:'Cinzel',serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;
+  padding:10px 18px;border-radius:10px;text-decoration:none;color:#05060a;background:linear-gradient(135deg,var(--or),#fff6df);white-space:nowrap;transition:.3s}
+.offer-bar .cta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,169,97,.5)}
+.offer-bar .pill{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ice-clair);border:1px solid rgba(125,211,252,.4);border-radius:999px;padding:3px 10px}
+
+/* ===== HERO ===== */
+.hero{min-height:92vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px 20px 60px;position:relative}
+.kicker{font-family:'Cinzel',serif;letter-spacing:.4em;text-transform:uppercase;font-size:12px;color:var(--or);margin-bottom:22px;opacity:0;animation:fadeUp 1s ease .2s forwards}
+.hero h1{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(52px,12vw,104px);line-height:.96;color:var(--perle);margin-bottom:18px;opacity:0;animation:fadeUp 1.1s ease .5s forwards}
+.hero h1 em{font-style:italic;background:linear-gradient(100deg,var(--or-pale),var(--or) 45%,#fff7e6 55%,var(--or) 70%,var(--bronze));background-size:220% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shine 8s linear infinite}
+@keyframes shine{to{background-position:220% center}}
+.hero .tag{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(20px,4.5vw,28px);color:var(--perle-doux);max-width:560px;margin-bottom:36px;opacity:0;animation:fadeUp 1.1s ease .8s forwards}
+.hero .btns{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;opacity:0;animation:fadeUp 1.1s ease 1.1s forwards}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:'Cinzel',serif;font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;padding:16px 28px;border-radius:13px;text-decoration:none;cursor:pointer;transition:.35s;border:none}
+.btn.primary{background:linear-gradient(135deg,var(--bronze),var(--bronze-clair));color:#fff;box-shadow:0 10px 32px rgba(184,115,51,.45)}
+.btn.primary:hover{transform:translateY(-3px);box-shadow:0 14px 46px rgba(184,115,51,.65)}
+.btn.ghost{background:rgba(125,211,252,.08);color:var(--ice-clair);border:1.5px solid rgba(125,211,252,.45)}
+.btn.ghost:hover{border-color:var(--ice-clair)}
+.scrollhint{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);font-family:'Cinzel',serif;font-size:10px;letter-spacing:.4em;text-transform:uppercase;color:var(--brume);animation:bob 3s ease-in-out infinite}
+@keyframes bob{0%,100%{opacity:.3;transform:translateX(-50%) translateY(0)}50%{opacity:.9;transform:translateX(-50%) translateY(6px)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+
+/* ===== SECTIONS ===== */
+section{padding:80px 20px;max-width:1120px;margin:0 auto}
+.head{text-align:center;margin-bottom:44px}
+.head h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(38px,8vw,68px);line-height:1.02;color:var(--perle);margin-bottom:12px}
+.head h2 em{color:var(--or);font-style:italic}
+.head p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(19px,4vw,24px);color:var(--perle-doux);max-width:600px;margin:0 auto}
+
+/* ===== GRILLE DE CADRES VIDÉO ===== */
+.vgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
+.vframe{position:relative;border-radius:18px;overflow:hidden;border:1.5px solid rgba(125,211,252,.25);background:var(--noir2);aspect-ratio:16/10;
+  box-shadow:0 14px 40px rgba(0,0,0,.45);animation:framebreath 6s ease-in-out infinite alternate}
+@keyframes framebreath{0%{box-shadow:0 0 18px rgba(125,211,252,.10)}100%{box-shadow:0 0 34px rgba(125,211,252,.26)}}
+.vframe:hover{border-color:var(--ice-clair)}
+.vframe video{width:100%;height:100%;object-fit:cover;display:block}
+/* placeholder visible tant qu'aucune vidéo n'est déposée */
+.vframe .ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;padding:18px;
+  background:linear-gradient(135deg,rgba(125,211,252,.10),rgba(2,4,10,.85));}
+.vframe .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(168,227,255,.16) 50%,transparent 70%);background-size:220% 100%;animation:shimmer 2.6s linear infinite}
+@keyframes shimmer{to{background-position:-220% 0}}
+.vframe .ph .play{width:60px;height:60px;border-radius:50%;border:2px solid var(--ice-clair);display:flex;align-items:center;justify-content:center;color:var(--ice-clair);font-size:22px;position:relative;z-index:1}
+.vframe .ph .lab{font-family:'Cinzel',serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ice-clair);position:relative;z-index:1}
+.vframe .ph .path{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--brume);position:relative;z-index:1}
+.vframe .cap{position:absolute;left:0;right:0;bottom:0;padding:14px 16px;background:linear-gradient(0deg,rgba(2,4,10,.85),transparent);z-index:1}
+.vframe .cap .t{font-family:'Cormorant Garamond',serif;font-size:20px;color:#fff}
+.vframe .cap .s{font-family:'Inter',sans-serif;font-size:12.5px;color:var(--perle-doux)}
+
+/* ===== SPLIT 90/10 ===== */
+.split{display:grid;grid-template-columns:1fr;gap:18px}
+@media(min-width:760px){.split{grid-template-columns:1fr 1fr}}
+.block{padding:38px 26px;border-radius:20px;background:rgba(2,4,10,.7);border:1.5px solid rgba(184,115,51,.35)}
+.block.cap{border-color:rgba(125,211,252,.4)}
+.block .n{font-family:'Cinzel',serif;font-weight:700;font-size:84px;line-height:.9;color:var(--bronze-clair)}
+.block.cap .n{color:var(--ice-clair)}
+.block .l{font-family:'Cinzel',serif;font-size:13px;letter-spacing:.3em;text-transform:uppercase;color:var(--brume);margin:6px 0 12px}
+.block h3{font-family:'Cormorant Garamond',serif;font-size:30px;color:var(--perle);margin-bottom:6px}
+.block h3 em{color:var(--or);font-style:italic}
+.block p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:var(--perle-doux)}
+
+/* ===== OFFRE FINALE ===== */
+.final{max-width:680px;margin:0 auto;text-align:center;padding:48px 28px;border-radius:24px;
+  background:linear-gradient(160deg,rgba(125,211,252,.12),rgba(2,4,10,.85));border:2px solid rgba(125,211,252,.5);
+  animation:finalglow 3.4s ease-in-out infinite alternate}
+@keyframes finalglow{0%{box-shadow:0 0 40px rgba(125,211,252,.35)}100%{box-shadow:0 0 90px rgba(125,211,252,.7)}}
+.final .badge{display:inline-block;font-family:'Cinzel',serif;font-size:11px;letter-spacing:.4em;text-transform:uppercase;color:var(--ice-clair);border:1px solid rgba(125,211,252,.5);background:rgba(125,211,252,.15);border-radius:16px;padding:6px 16px;margin-bottom:18px}
+.final h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(32px,7vw,48px);color:#fff;margin-bottom:10px}
+.final h2 em{color:var(--ice-clair);font-style:italic}
+.final p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;color:var(--perle-doux);margin-bottom:26px}
+
+footer{text-align:center;padding:50px 20px 80px;border-top:1px solid rgba(184,115,51,.18);color:var(--brume);font-size:13px}
+footer a{color:var(--ice-clair);text-decoration:none}
+
+/* ===== REVEAL AU SCROLL ===== */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+.reveal.d1{transition-delay:.12s}.reveal.d2{transition-delay:.24s}.reveal.d3{transition-delay:.36s}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none !important}
+  .reveal{opacity:1;transform:none;transition:none}
+}
+@media(max-width:600px){.offer-bar .txt{display:none}.hero{padding:104px 16px 40px}section{padding:54px 16px}}
+</style></head><body>
+<div class="bg"></div>
+
+<!-- OFFRE STICKY — toujours visible -->
+<div class="offer-bar">
+  <span class="pill">⚓ LANCEMENT</span>
+  <span class="txt"><b>Réserve ta place</b> — accès anticipé gratuit, 0&nbsp;€</span>
+  <a class="cta" href="https://wa.me/972537082746?text=Je%20veux%20r%C3%A9server%20ma%20place">Réserver →</a>
+</div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="kicker">Skipper · Finance · Méthode 90/10</div>
+  <h1>L'<em>exemple</em><br>vivant.</h1>
+  <p class="tag">Ma méthode · ton argent · ton tempo.</p>
+  <div class="btns">
+    <a class="btn primary" href="#offre">✨ Je réserve ma place</a>
+    <a class="btn ghost" href="#videos">▶ Voir les vidéos</a>
+  </div>
+  <div class="scrollhint">↓ Découvrir</div>
+</header>
+
+<!-- GRILLE DE CADRES VIDÉO -->
+<section id="videos">
+  <div class="head reveal">
+    <h2>En <em>images</em>.</h2>
+    <p>Plusieurs cadres, plusieurs histoires — la mer, la méthode, la mémoire.</p>
+  </div>
+  <div class="vgrid">
+
+    <div class="vframe reveal">
+      <video muted loop playsinline preload="metadata" poster="/assets/bg-1.jpg">
+        <source src="/assets/clip-1.mp4" type="video/mp4">
+      </video>
+      <div class="ph"><div class="play">▶</div><div class="lab">Cadre vidéo 1</div><div class="path">/assets/clip-1.mp4</div></div>
+      <div class="cap"><div class="t">La mer</div><div class="s">Le rythme, la patience active</div></div>
+    </div>
+
+    <div class="vframe reveal d1">
+      <video muted loop playsinline preload="metadata" poster="/assets/bg-1.jpg">
+        <source src="/assets/clip-2.mp4" type="video/mp4">
+      </video>
+      <div class="ph"><div class="play">▶</div><div class="lab">Cadre vidéo 2</div><div class="path">/assets/clip-2.mp4</div></div>
+      <div class="cap"><div class="t">La méthode</div><div class="s">90% forteresse · 10% plaisir</div></div>
+    </div>
+
+    <div class="vframe reveal d2">
+      <video muted loop playsinline preload="metadata" poster="/assets/bg-1.jpg">
+        <source src="/assets/clip-3.mp4" type="video/mp4">
+      </video>
+      <div class="ph"><div class="play">▶</div><div class="lab">Cadre vidéo 3</div><div class="path">/assets/clip-3.mp4</div></div>
+      <div class="cap"><div class="t">Le bateau</div><div class="s">Le laboratoire flottant</div></div>
+    </div>
+
+    <div class="vframe reveal">
+      <video muted loop playsinline preload="metadata" poster="/assets/bg-1.jpg">
+        <source src="/assets/clip-4.mp4" type="video/mp4">
+      </video>
+      <div class="ph"><div class="play">▶</div><div class="lab">Cadre vidéo 4</div><div class="path">/assets/clip-4.mp4</div></div>
+      <div class="cap"><div class="t">La mémoire</div><div class="s">NAVLYS NEXT GEN</div></div>
+    </div>
+
+    <div class="vframe reveal d1">
+      <video muted loop playsinline preload="metadata" poster="/assets/bg-1.jpg">
+        <source src="/assets/clip-5.mp4" type="video/mp4">
+      </video>
+      <div class="ph"><div class="play">▶</div><div class="lab">Cadre vidéo 5</div><div class="path">/assets/clip-5.mp4</div></div>
+      <div class="cap"><div class="t">La trompette</div><div class="s">Le souffle, le tempo</div></div>
+    </div>
+
+    <div class="vframe reveal d2">
+      <video muted loop playsinline preload="metadata" poster="/assets/bg-1.jpg">
+        <source src="/assets/clip-6.mp4" type="video/mp4">
+      </video>
+      <div class="ph"><div class="play">▶</div><div class="lab">Cadre vidéo 6</div><div class="path">/assets/clip-6.mp4</div></div>
+      <div class="cap"><div class="t">La communauté</div><div class="s">Échanger, transmettre</div></div>
+    </div>
+
+  </div>
+  <p class="mono" style="text-align:center;color:var(--brume);font-size:12px;margin-top:22px">Dépose tes clips dans <b style="color:var(--ice-clair)">/assets/clip-1.mp4 … clip-6.mp4</b> — ils remplacent automatiquement les cadres.</p>
+</section>
+
+<!-- SPLIT 90/10 (reveal) -->
+<section>
+  <div class="head reveal"><h2>Ma <em>méthode</em>.<br>Ton <em>tempo</em>.</h2><p>Pas de promesse. Une discipline.</p></div>
+  <div class="split">
+    <div class="block reveal"><div class="n">90</div><div class="l">Forteresse</div><h3>Tu <em>dors</em> bien.</h3><p>ETF mondial · DCA · patience.</p></div>
+    <div class="block cap reveal d1"><div class="n">10</div><div class="l">Cap plaisir</div><h3>Tu <em>joues</em>, sans casser.</h3><p>Positions ciblées · stop discipliné.</p></div>
+  </div>
+</section>
+
+<!-- OFFRE FINALE (reveal) -->
+<section id="offre">
+  <div class="final reveal">
+    <span class="badge">Accès anticipé</span>
+    <h2>Prêt à <em>embarquer</em> ?</h2>
+    <p>Réserve ta place maintenant — gratuit, sans engagement.</p>
+    <a class="btn primary" href="https://wa.me/972537082746?text=Je%20veux%20r%C3%A9server%20ma%20place">📞 Réserver sur WhatsApp</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Bruno Mark Partouche — Démo animée. · <a href="/mentions-legales">Mentions légales</a></p>
+  <p style="margin-top:8px;font-style:italic">Information éducative — pas un conseil en investissement.</p>
+</footer>
+
+<script>
+// Reveal au scroll (IntersectionObserver)
+(function(){
+  var els = document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){ els.forEach(function(e){e.classList.add('in');}); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, {threshold:.16, rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){ io.observe(e); });
+})();
+// Cache le placeholder quand une vraie vidéo est chargée + lance la lecture
+document.querySelectorAll('.vframe').forEach(function(f){
+  var v=f.querySelector('video'), ph=f.querySelector('.ph');
+  if(!v) return;
+  v.addEventListener('loadeddata', function(){
+    if(v.readyState>=2 && v.videoWidth>0){ ph.style.display='none'; v.play().catch(function(){}); }
+  });
+});
+</script>
+</body></html>
