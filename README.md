@@ -1,9 +1,8 @@
 # NAVLYS — Socle unique des sites (monorepo)
 
-Dépôt **source de vérité** pour tous les sites de la famille NAVLYS. Objectif :
+Dépôt **source de vérité** pour les sites de la famille NAVLYS. Objectif :
 sortir du déploiement manuel (Vercel CLI) et passer à **un dépôt → Vercel → déploiement automatique**,
-avec une **identité visuelle unifiée** (fond vidéo bateau + écusson animé) et le contenu enrichi
-par les anciennes pages.
+avec une **identité visuelle unifiée** et des pages animées (apparition au scroll, offre visible).
 
 ## Structure
 
@@ -11,19 +10,26 @@ par les anciennes pages.
 sites/
   _shared/
     navlys-family-theme.css   # thème commun Ice Blue / or / bronze
+    navlys-fond.js            # fond unifié : vidéo bateau + écusson géant
+    navlys-reveal.js          # apparition au scroll (auto, sans classes)
     hero-bg-slideshow.js      # diaporama d'images (fallback)
-    navlys-fond.js            # FOND UNIFIÉ : vidéo bateau + écusson géant
-  brunopartouche/             # SITE PILOTE
-    biographie.html           # ✅ portée (Drive O1), NAVBIO→NAVLYS NEXT GEN
-    assets/                   # navlys-bateau.mp4, ecusson.png, bg-1.jpg (à déposer)
-  navlys-com/                 # à venir
-  navlys-io/                  # à venir
-  navbiolife/  (→ NAVLYS NEXT GEN)
-STATUS.md                     # carte d'état : qui est à jour, quoi faire
+  brunopartouche/             # site multi-pages animé (le plus avancé)
+    index.html  biographie.html  parcours.html  univers.html
+    journal.html  navlys-next-gen.html  demo-animee.html  mentions-legales.html
+    vercel.json               # cleanUrls
+    assets/                   # vidéos/écusson/poster (à déposer)
+  navlys/                     # brouillon « méthode 90/10 » (≠ navlys.com live)
+    index.html  methode.html  tarifs.html  alpaca.html  mentions-legales.html  vercel.json
+docs/MISE_EN_LIGNE_VERCEL.md  # guide de connexion Vercel (méthode sûre)
+scripts/check_internal_links.py  # contrôle anti-404 (CI)
+STATUS.md                     # carte d'état détaillée
 ```
 
-## Fond unifié — une seule ligne par page
+## CI (GitHub Actions — « Sites check »)
+Chaque PR/commit sur `main` vérifie automatiquement : socle présent · **aucun NAVBIO** ·
+HTML valide · **liens internes (anti-404)**. Tout doit être **vert** pour merger.
 
+## Fond unifié — une seule ligne par page
 ```html
 <script src="/_shared/navlys-fond.js"
         data-video="/assets/navlys-bateau.mp4"
@@ -32,16 +38,9 @@ STATUS.md                     # carte d'état : qui est à jour, quoi faire
 ```
 
 ## Règle de nommage
+**NAVBIO → NAVLYS NEXT GEN** partout (vérifié par la CI ; routes `/navbio` → `/navlys-next-gen`).
 
-**NAVBIO → NAVLYS NEXT GEN** partout (textes, menus, CTA ; routes `/navbio` → `/navlys-next-gen`).
-
-## Mise en ligne (étapes — à faire une fois)
-
-1. Sur **vercel.com** → équipe NAVLYS → projet `brunopartouche` → **Settings → Git** → *Connect Git Repository* → ce dépôt, dossier racine `sites/brunopartouche`.
-2. Répéter pour `navlys-app`, `navlys-io`, `navbio` (chacun pointant sur son dossier).
-3. Déposer les assets (vidéo bateau confirmée + écusson) dans chaque `sites/<site>/assets/`.
-4. Ensuite : **chaque modification commit = mise en ligne automatique**.
-
-## Intégrations (phase backend, après le socle)
-
-NAVLYS CORE = Supabase `navlys-core`. À brancher : WhatsApp 360, ElevenLabs, Zapier, Stripe, Resend.
+## Mise en ligne
+Voir **`docs/MISE_EN_LIGNE_VERCEL.md`** — méthode sûre : projet d'aperçu Vercel
+(Root Directory `sites/brunopartouche`), validation, **puis** bascule du domaine.
+⚠️ Ne pas écraser navlys.com (NAVLYS CORE) par le brouillon `sites/navlys`.
