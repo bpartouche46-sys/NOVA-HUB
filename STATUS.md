@@ -1,51 +1,47 @@
-# NAVLYS — Carte d'état des sites & contenus
+# NAVLYS — Carte d'état du dépôt
 
-> Mis à jour : 2026-06-13. Source de vérité unique pour savoir **quel site est à jour et comment le faire évoluer**.
+> Mis à jour : 2026-06-22. Source de vérité unique sur l'état du dépôt et ce qui reste.
 
 ## 1. Sites en ligne (Vercel — équipe NAVLYS)
 
-| Domaine | Projet Vercel | État | À faire évoluer |
+| Domaine | Projet Vercel | En ligne (déployé via CLI) | Présent dans CE dépôt |
 |---|---|---|---|
-| navlys.com | navlys-app | ✅ EN LIGNE | Ajouter pages : méthode, tarifs, Alpaca, journal |
-| navlys.io | navlys-io | ✅ EN LIGNE (vitrine famille) | Ajouter page Journal/News, page Ambassadeurs |
-| navbiolife.com | navbio | ✅ EN LIGNE | **Renommer NAVBIO → NAVLYS NEXT GEN** partout |
-| brunopartouche.com | brunopartouche | ✅ EN LIGNE | **PILOTE** : fond unifié + pages bio/univers/journal + menus |
+| navlys.com | navlys-app | ✅ NAVLYS CORE (univers IA) | brouillon « méthode 90/10 » (`sites/navlys`) — **≠ live** |
+| brunopartouche.com | brunopartouche | ✅ landing animée 1 page | **site multi-pages animé** (`sites/brunopartouche`) |
+| navbiolife.com | navbio | ✅ | non porté |
+| navlys.io | navlys-io | ✅ | non porté |
 
-Doublon **résolu** : le projet Netlify `novafinanceclub` est désactivé ; brunopartouche.com est servi par Vercel.
+⚠️ Les sites live sont déployés **via Vercel CLI**, sans lien Git. Ce dépôt n'est **pas encore**
+connecté à Vercel → voir `docs/MISE_EN_LIGNE_VERCEL.md` (méthode sûre aperçu→bascule).
 
-> ⚠️ Tous déployés via **Vercel CLI**, sans lien GitHub. Objectif de ce dépôt : devenir la **source unique** connectée à Vercel pour rendre chaque site modifiable et auto-déployé.
+## 2. Contenu du dépôt (12 pages) — état
 
-## 2. Identité visuelle unifiée (à appliquer PARTOUT)
+**brunopartouche** (`sites/brunopartouche/`)
+- ✅ `index.html` — accueil animé (hero doré, 3 mondes, teaser vidéo, 90/10, offre)
+- ✅ `biographie.html` (12 sections) · `parcours.html` (chronologie) · `univers.html` (4 piliers)
+- ✅ `journal.html` · `navlys-next-gen.html` (4 paliers) · `demo-animee.html` (cadres vidéo)
+- ✅ `mentions-legales.html` · `vercel.json` (cleanUrls)
 
-- **Thème** : `sites/_shared/navlys-family-theme.css` (Ice Blue + or/bronze, cards respirantes).
-- **Fond unifié** : `sites/_shared/navlys-fond.js` → **vidéo bateau** + **écusson animé géant** en filigrane + voile sombre.
-  - Assets attendus dans `sites/<site>/assets/` : `navlys-bateau.mp4`, `ecusson.png`, `bg-1.jpg`.
-  - Vidéos bateau candidates (Google Drive › dossier `tri`) : `20250807_212540.mp4`, `20250702_081314.mp4`, `20250615_204300.mp4` — **à confirmer laquelle**.
+**navlys** (`sites/navlys/`) — brouillon « méthode 90/10 »
+- ✅ `index.html` · `methode.html` · `tarifs.html` · `alpaca.html` · `mentions-legales.html` · `vercel.json`
 
-## 3. Pages anciennes à réintégrer (Google Drive › « NOVA Finance Club - Bruno Partouche »)
+**socle** (`sites/_shared/`)
+- ✅ `navlys-family-theme.css` · `navlys-fond.js` (vidéo+écusson) · `hero-bg-slideshow.js`
+- ✅ `navlys-reveal.js` (apparition au scroll, inclus sur les pages de contenu)
 
-| Page Drive | Destination | État |
-|---|---|---|
-| O1_brunopartouche_BIOGRAPHIE_12sections.html | brunopartouche/biographie.html | ✅ **portée** (rename appliqué) |
-| O2_brunopartouche_UNIVERS.html | brunopartouche/univers.html | ⏳ à porter |
-| O3_navlys_JOURNAL_COMMUNAUTE.html | navlys.io/journal.html | ⏳ à porter |
-| W1_navlys_EN_method.html | navlys.com/methode.html | ⏳ |
-| W2 / Z2_TARIFS | navlys.com/tarifs.html | ⏳ |
-| W3 / AA1_ALPACA | navlys.com/alpaca.html | ⏳ |
-| W4 / Y2_AMBASSADEURS | navlys.io/ambassadeurs.html | ⏳ |
-| A1_MENTIONS_LEGALES | toutes (footer) | ⏳ |
+## 3. CI (GitHub Actions — `Sites check`)
+Garde-fous automatiques (vert requis) : socle présent · **aucun NAVBIO** · HTML valide · **liens internes (anti-404)**.
 
-## 4. Redondances détectées (à fusionner)
+## 4. Reste à faire — bloqué sur des inputs externes
+- ⛔ **Assets** : déposer `navlys-bateau.mp4`, `ecusson.png`, `bg-1.jpg`, et `clip-1..6.mp4`
+  dans `sites/<site>/assets/` (fond + cadres démo).
+- ⛔ **Tarifs** : montants Skipper/Capitaine (navlys) + paliers NAVLYS NEXT GEN.
+- ⛔ **Vercel** : import du dépôt + Root Directory (action côté dashboard).
 
-- Drive : plusieurs `index.html`, `journal_recherche` (×3), `veille_2026-06-01` (×2), `bastion-du-jour` (×2), `_NAVLYS_CARTE_MERE_J-10` (×3), `BB1_TEMPLATES_EMAILS_RESEND` (×2), `cockpit.html` (×2). → garder la version la plus récente, archiver le reste.
-- Dépôts GitHub : `NOVA-HUB`, `NOVA-HUB-1`, `NAVLYS-BETA-`, `bpartouche46-sys-navlys-com`, `Ai-Suite-PRO`, `gdp-dashboard` (×3). → consolider en un seul socle (ce dépôt) + archiver les redondants.
-
-## 5. Serveur mémoire central & cloud
-
-- **NAVLYS CORE** = projet **Supabase** `navlys-core` (eu-west-3, actif). → base centrale des apps/données.
-- **Google Workspace** = Drive (dossier maître à créer : `NAVLYS_CORE_MASTER`).
-- Intégrations à brancher (phase backend) : Supabase, WhatsApp 360, ElevenLabs, Zapier, Stripe, Resend.
+## 5. Reste à faire — réalisable côté dépôt
+- ⏳ Reconstruire l'**univers NAVLYS CORE** dans `sites/navlys` avant toute bascule de navlys.com.
+- ⏳ Porter **navlys.io** et **navbiolife → NAVLYS NEXT GEN**.
+- ⏳ P3 audit : factorisation de charte, harmonisation nav/journal.
 
 ## 6. Règle de nommage GLOBALE
-
-> **NAVBIO → NAVLYS NEXT GEN** partout (textes, titres, menus, CTA). Les routes `/navbio` deviennent `/navlys-next-gen`.
+> **NAVBIO → NAVLYS NEXT GEN** partout (vérifié par la CI).

@@ -43,3 +43,6 @@ jobs:
             grep -qi '<html' "$f" && grep -qi '</html>' "$f" \
               && echo "OK   $f" || { echo "HTML invalide: $f"; exit 1; }
           done < <(find sites -name '*.html')
+
+      - name: Vérifier les liens internes (anti-404)
+        run: python3 scripts/check_internal_links.py
