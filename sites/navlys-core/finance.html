@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NAVLYS Finance — Ton cockpit du jour, en euros et en bon sens</title>
+<meta name="description" content="NAVLYS Finance : le brief du jour, ta stratégie en 1 clic, le simulateur anti-jackpot. Éducation & veille, chiffré en euros, jamais de conseil. Gratuit (0 €).">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2305060a'/><circle cx='16' cy='16' r='7' fill='none' stroke='%235fe0ff' stroke-width='2'/><circle cx='16' cy='16' r='2.5' fill='%23e9d3a0'/></svg>">
+<meta property="og:type" content="website">
+<meta property="og:title" content="NAVLYS Finance — Ton cockpit du jour">
+<meta property="og:description" content="Le brief du jour, ta stratégie en 1 clic, le simulateur du bon sens. Gratuit (0 €).">
+<meta property="og:url" content="https://navlys.com/finance">
+<meta property="og:image" content="https://navlys.com/assets/og-core.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://navlys.com/finance">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Fraunces:ital@1&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--noir:#05060a;--ice:#5fe0ff;--or:#e9d3a0;--rouge:#ff2a1f;--vin:#7a1f2b;--vert:#7be29a;--perle:#eef0f6;--mut:#9fb3c8}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Lora',serif;color:var(--perle);background:var(--noir);line-height:1.6}
+.bg{position:fixed;inset:0;z-index:-1;background:radial-gradient(820px 560px at 86% -8%,rgba(233,211,160,.11),transparent 60%),radial-gradient(760px 560px at 5% 6%,rgba(95,224,255,.12),transparent 60%),radial-gradient(1000px 820px at 50% 122%,rgba(122,31,43,.38),transparent 64%),var(--noir)}
+.wrap{max-width:920px;margin:0 auto;padding:0 18px 60px}
+header{display:flex;align-items:center;gap:11px;padding:24px 0}
+.led{width:13px;height:13px;border-radius:50%;background:radial-gradient(circle at 50% 40%,#bdf3ff,var(--ice) 60%,rgba(95,224,255,.1));box-shadow:0 0 14px var(--ice)}
+.brand{font-family:'Cormorant Garamond';letter-spacing:4px;color:#fff;font-size:1.2rem}
+a.home{margin-left:auto;color:var(--mut);text-decoration:none;font-family:'Fraunces';font-style:italic}
+a.home:hover{color:var(--ice)}
+h1{font-family:'Cormorant Garamond';font-weight:700;color:#fff;font-size:clamp(2rem,6vw,3rem);line-height:1.06;margin:8px 0}
+.sub{color:var(--mut);font-family:'Fraunces';font-style:italic;max-width:640px;margin-bottom:8px}
+.pill{display:inline-block;margin:14px 0;font-family:'Fraunces';font-style:italic;font-size:.8rem;color:#05060a;background:linear-gradient(100deg,var(--or),#fff6df);border-radius:999px;padding:4px 13px}
+.card{background:linear-gradient(160deg,rgba(122,31,43,.16),rgba(10,12,20,.6));border:1px solid rgba(95,224,255,.16);border-radius:18px;padding:22px;margin:18px 0}
+.card h2{font-family:'Cormorant Garamond';color:var(--or);font-size:1.5rem;margin-bottom:6px}
+.stat{text-align:center;border:1px solid rgba(95,224,255,.28);border-radius:20px;padding:26px 22px;background:linear-gradient(160deg,rgba(122,31,43,.2),rgba(10,12,20,.72));margin:18px 0}
+.stat .big{font-family:'Cormorant Garamond';font-weight:600;color:#fff;font-size:clamp(2.6rem,9vw,4rem);line-height:1}
+label{display:block;color:var(--mut);font-size:.9rem;margin:14px 0 4px}
+input[type=range]{width:100%;accent-color:var(--ice)}
+.val{color:#fff;font-family:'Cormorant Garamond';font-size:1.3rem}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}
+@media(max-width:620px){.row{grid-template-columns:1fr}}
+.scn{border-radius:16px;padding:20px;border:1px solid rgba(255,255,255,.1)}
+.scn.jackpot{background:linear-gradient(160deg,rgba(255,42,31,.14),rgba(122,31,43,.20));border-color:rgba(255,90,70,.35)}
+.scn.serein{background:linear-gradient(160deg,rgba(95,224,255,.10),rgba(123,226,154,.10));border-color:rgba(95,224,255,.3)}
+.scn h3{font-family:'Cormorant Garamond';font-size:1.35rem;color:#fff}
+.big2{font-family:'Cormorant Garamond';font-size:2.1rem;font-weight:700;line-height:1.1}
+.win{color:var(--vert)}.loss{color:#ff6a5e}.calm{color:var(--ice)}
+.note{font-size:.86rem;color:var(--mut);margin-top:8px}
+.lesson{border-left:3px solid var(--or);padding:6px 0 6px 20px;margin:26px 0;font-size:1.05rem}
+.lesson b{color:var(--or)}
+.disc{margin-top:30px;font-size:.8rem;color:#8fa6c8;font-style:italic;line-height:1.7;border-top:1px solid rgba(255,255,255,.08);padding-top:18px}
+a.inline{color:var(--ice)}
+</style></head><body>
+<div class="bg"></div>
+<div class="wrap">
+  <header><span class="led"></span><span class="brand">NAVLYS</span><span style="color:var(--mut);font-family:'Fraunces';font-style:italic">· Finance</span><a class="home" href="/">‹ Accueil</a></header>
+  <h1>Ton cockpit du jour,<br>en euros et en bon sens.</h1>
+  <p class="sub">Le brief du matin, ta stratégie en 1 clic, et un simulateur qui te montre — chiffré en euros — comment la sérénité fait grandir ton argent. NAVLYS prépare ; toi, tu gardes la barre.</p>
+  <span class="pill">GRATUIT · 0 € · pure éducation &amp; veille</span>
+
+  <div class="stat">
+    <div class="big">74–89 %</div>
+    <p style="font-family:'Fraunces';font-style:italic;color:#e9d3a0;font-size:clamp(1rem,3vw,1.25rem);margin:6px 0 12px">des particuliers qui tradent <b style="font-style:normal;color:#fff">perdent de l'argent chaque année.</b></p>
+    <p class="note">Chiffres issus des communications réglementaires des courtiers (obligation ESMA d'afficher le % de clients particuliers perdants sur les CFD) — ordres de grandeur, à vérifier selon la source et l'année.</p>
+    <p style="font-family:'Cormorant Garamond';color:#5fe0ff;font-size:clamp(1.2rem,4vw,1.6rem);margin:16px 0 0">NAVLYS Finance t'apprend à rester du <b style="color:#fff">bon côté</b> — en euros, en sérénité.</p>
+  </div>
+
+  <div class="card">
+    <h2>🧮 Le simulateur du bon sens</h2>
+    <p class="note">Bouge les curseurs. Tu compares deux attitudes avec <b>le même argent</b> : tout miser sur le coup de poker, ou avancer en bon père/mère de famille (90/10). Tout est en euros, net d'un coût de frais estimé.</p>
+    <label>💶 Ce que tu mets de côté au départ : <span class="val" id="capV">10 000 €</span></label>
+    <input type="range" id="cap" min="1000" max="100000" step="1000" value="10000">
+    <label>📅 Pendant combien d'années : <span class="val" id="anV">10 ans</span></label>
+    <input type="range" id="an" min="1" max="30" step="1" value="10">
+    <label>➕ Ce que tu ajoutes chaque mois : <span class="val" id="moisV">100 €</span></label>
+    <input type="range" id="mois" min="0" max="2000" step="25" value="100">
+    <div class="row">
+      <div class="scn jackpot"><h3>🎰 L'approche coup de poker</h3><div class="note">Tout miser pour gagner gros, vite.</div><div style="margin-top:8px">Si ça passe :</div><div class="big2 win" id="jpWin">—</div><div>Le plus souvent, il en reste :</div><div class="big2 loss" id="jpLoss">—</div></div>
+      <div class="scn serein"><h3>🧭 L'approche 90/10 sereine</h3><div class="note">90 % au calme, 10 % pour apprendre.</div><div style="margin-top:8px">Ce que ça construit, tranquillement :</div><div class="big2 calm" id="srVal">—</div><div class="note" id="srNote"></div></div>
+    </div>
+    <p class="note" style="margin-top:10px">Illustration pédagogique hypothétique — ce ne sont ni des prévisions ni des rendements promis.</p>
+  </div>
+
+  <div class="lesson"><p>La vraie leçon : <b>le vrai gain arrive quand tu rassembles tes forces et gardes le cap.</b> La discipline d'un bon père de famille bat le coup de poker sur la durée, parce qu'elle <b>protège ce que tu construis</b>.</p></div>
+
+  <p class="disc"><b>NAVLYS Finance est un outil d'éducation et de veille à vocation informative uniquement.</b> Il ne fournit aucun conseil personnalisé en investissement, ni recommandation d'achat ou de vente, et ne promet aucun rendement. Les marchés comportent un risque de perte. NAVLYS ne dispose d'aucun agrément d'intermédiaire financier. Tous les tarifs sont indiqués <b>HT</b>. Réservé aux 18 ans et +. · <a class="inline" href="/mentions-legales">Mentions légales</a></p>
+</div>
+<script>
+var eur=function(n){return Math.round(n).toLocaleString('fr-FR')+' €';};
+var cap=document.getElementById('cap'),an=document.getElementById('an'),mois=document.getElementById('mois');
+function calc(){
+  var C=+cap.value,Y=+an.value,M=+mois.value;
+  document.getElementById('capV').textContent=eur(C);
+  document.getElementById('anV').textContent=Y+' ans';
+  document.getElementById('moisV').textContent=eur(M);
+  var totalVerse=C+M*12*Y, r=0.03/12, n=Y*12;
+  var serein=C*Math.pow(1+r,n); if(M>0) serein+=M*((Math.pow(1+r,n)-1)/r);
+  document.getElementById('srVal').textContent=eur(serein);
+  document.getElementById('srNote').textContent='Tu as mis '+eur(totalVerse)+' — soit '+eur(serein-totalVerse)+' construits sans jamais tout risquer.';
+  document.getElementById('jpWin').textContent=eur(totalVerse*2.4);
+  document.getElementById('jpLoss').textContent=eur(totalVerse*0.35);
+}
+[cap,an,mois].forEach(function(el){el.addEventListener('input',calc);}); calc();
+</script>
+<script src="../_shared/navlys-reveal.js" defer></script>
+</body></html>
