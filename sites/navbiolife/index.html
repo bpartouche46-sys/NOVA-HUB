@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>NAVLYS NEXT GEN — Ta vie, racontée. Gardée. Transmise.</title>
+<meta name="description" content="NAVLYS NEXT GEN · biographie vivante. Ta vie qui s'enrichit, se partage, se transmet — pour les tiens et pour ceux qui viendront.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2306080b'/><text x='16' y='23' font-size='18' text-anchor='middle' fill='%23C9A961' font-family='Georgia,serif'>N</text></svg>">
+<meta property="og:type" content="website">
+<meta property="og:title" content="NAVLYS NEXT GEN — Ta vie, racontée. Gardée. Transmise.">
+<meta property="og:description" content="Biographie vivante : ta vie qui s'enrichit, se partage, se transmet.">
+<meta property="og:url" content="https://navbiolife.com/">
+<meta property="og:image" content="https://navbiolife.com/assets/og-nextgen.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://navbiolife.com/">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital@0;1&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--noir:#06080b;--bronze:#B87333;--bronze-clair:#D49B5B;--or:#C9A961;--or-pale:#f3e4c4;--ice:#7DD3FC;--ice-clair:#a8e3ff;--ice-deep:#3a8db5;--perle:#e7eef2;--perle-doux:#bcc9d1;--brume:#7c8b95}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth;background:#02040a}
+body{background:transparent;color:var(--perle);font-family:'Cormorant Garamond',serif;font-size:19px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;min-height:100vh;position:relative}
+.bgfx{position:fixed;inset:0;z-index:-1;background:radial-gradient(820px 560px at 84% -6%,rgba(233,211,160,.12),transparent 60%),radial-gradient(760px 560px at 6% 6%,rgba(125,211,252,.12),transparent 60%),radial-gradient(1100px 880px at 50% 122%,rgba(184,115,51,.22),transparent 64%),#02040a}
+.wrap{position:relative;z-index:2;max-width:880px;margin:0 auto;padding:0 24px}
+header{min-height:90vh;display:flex;flex-direction:column;justify-content:center;padding:80px 0 60px;text-align:center}
+.kicker{font-family:'Cinzel',serif;font-size:13px;letter-spacing:.4em;color:var(--ice);text-transform:uppercase;margin-bottom:30px}.kicker span{color:var(--or)}
+h1{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(48px,9vw,90px);line-height:1.05;color:var(--perle);margin:0 auto 24px;max-width:900px}
+h1 em{font-style:italic;background:linear-gradient(100deg,var(--or-pale),var(--or) 45%,#fff7e6 55%,var(--or) 70%);background-size:220% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:sh 8s linear infinite;font-weight:400}
+@keyframes sh{to{background-position:220% center}}
+.prelude{font-style:italic;font-size:clamp(20px,2.6vw,26px);color:rgba(168,227,255,.9);text-shadow:0 0 12px rgba(125,211,252,.4);margin:50px auto 24px;max-width:680px;opacity:0;animation:fade 2s ease .4s forwards}
+@keyframes fade{to{opacity:1}}
+.brandline{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(50px,9vw,96px);letter-spacing:.1em;text-transform:uppercase;background:linear-gradient(100deg,#f3e4c4,#C9A961 35%,#fff7e6 50%,#C9A961 65%,#B87333);background-size:220% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin:24px auto 32px;line-height:1.05;filter:drop-shadow(0 0 18px rgba(184,115,51,.35));animation:sh 9s linear infinite}
+.lead{font-style:italic;font-size:clamp(26px,4vw,40px);line-height:1.5;color:var(--perle-doux);max-width:780px;margin:30px auto 44px}
+.cta{display:inline-flex;align-items:center;gap:10px;font-family:'Cinzel',serif;font-size:14px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;padding:18px 30px;border-radius:13px;text-decoration:none;color:#fff;background:linear-gradient(135deg,var(--bronze),var(--bronze-clair));box-shadow:0 10px 32px rgba(184,115,51,.45);transition:.35s}
+.cta:hover{transform:translateY(-3px);box-shadow:0 14px 46px rgba(184,115,51,.65)}
+section{padding:80px 0;border-top:1px solid rgba(184,115,51,.18)}
+section h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(34px,5.5vw,52px);line-height:1.15;color:var(--perle);margin-bottom:30px;text-align:center}
+section h2 em{color:var(--or);font-style:italic}
+.manifeste .body{font-size:clamp(20px,2.5vw,24px);line-height:1.7;color:var(--perle-doux);max-width:720px;margin:0 auto 28px}
+.manifeste .body em{color:var(--or-pale)}
+.signature{text-align:center;margin-top:40px;font-family:'Cinzel',serif;color:var(--or);letter-spacing:.3em;font-size:16px}
+.signature::before{content:"— ";color:var(--brume)}
+.chemins-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:22px;margin-top:30px}
+.chemin{padding:28px;background:rgba(2,4,10,.55);border:1px solid rgba(184,115,51,.22);border-radius:14px;transition:.4s}
+.chemin:hover{border-color:rgba(125,211,252,.5);transform:translateY(-3px);box-shadow:0 12px 32px rgba(125,211,252,.15)}
+.chemin .num{font-family:'Cinzel',serif;color:var(--ice);font-size:13px;letter-spacing:.3em;margin-bottom:10px}
+.chemin h3{font-weight:500;font-size:clamp(22px,3.2vw,28px);color:var(--or-pale);margin-bottom:10px;line-height:1.2}
+.chemin p{font-style:italic;color:var(--perle-doux);font-size:16px;line-height:1.55}
+.offre .intro{font-style:italic;color:var(--perle-doux);font-size:clamp(17px,2.3vw,20px);margin-bottom:24px;text-align:center}
+.paliers{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;max-width:760px;margin:0 auto}
+.pal{border:1px solid rgba(184,115,51,.3);border-radius:14px;padding:20px;text-align:center;background:rgba(2,4,10,.5)}
+.pal b{font-family:'Cinzel',serif;color:var(--or);letter-spacing:.12em;font-size:1rem}
+.pal p{font-style:italic;color:var(--perle-doux);font-size:.9rem;margin-top:6px}
+.center{text-align:center;margin-top:34px}
+footer{padding:60px 0 90px;border-top:1px solid rgba(184,115,51,.18);text-align:center}
+.brand-foot{font-size:22px;color:var(--perle)}.brand-foot span{color:var(--or)}
+.meta-foot{font-family:'Cinzel',serif;font-size:12px;letter-spacing:.25em;color:var(--brume);margin:8px 0 22px;text-transform:uppercase}
+.disclaimer{font-style:italic;color:var(--brume);font-size:14.5px;line-height:1.7;max-width:600px;margin:0 auto;padding:16px;border:1px solid rgba(184,115,51,.18);border-radius:10px;background:rgba(2,4,10,.5)}
+.disclaimer a{color:var(--ice);text-decoration:none}
+@media(prefers-reduced-motion:reduce){*{animation:none !important}}
+@media(max-width:768px){h1{font-size:46px}.brandline{font-size:54px}.lead{font-size:26px}}
+</style></head><body>
+<div class="bgfx"></div>
+
+<header><div class="wrap">
+<div class="kicker">NAVLYS NEXT GEN · <span>Biographie vivante · Mémoire · Transmission</span></div>
+<h1>Ta vie, <em>racontée</em>.<br>Gardée. Transmise.</h1>
+<p class="prelude">il y a bien longtemps, dans une vie lointaine…</p>
+<div class="brandline">NAVLYS NEXT GEN</div>
+<p class="lead">Pas un livre. Pas un album. Une biographie vivante qui s'enrichit, se partage, se transmet. Pour les tiens, et pour ceux qui viendront.</p>
+<div><a class="cta" href="https://wa.me/972537082746?text=Je%20veux%20cr%C3%A9er%20ma%20biographie%20NAVLYS%20NEXT%20GEN">✦ Réserver ma place</a></div>
+</div></header>
+
+<section class="manifeste"><div class="wrap">
+<h2>Manifeste <em>NAVLYS NEXT GEN</em></h2>
+<p class="body">Nous portons tous une histoire. <em>Des moments, des passages, des choix, des silences.</em> Cette histoire, elle s'efface si on ne la garde pas.</p>
+<p class="body">NAVLYS NEXT GEN n'est pas un livre figé. C'est <em>une biographie vivante</em> : qui se construit avec toi, qui s'enrichit chaque saison, qui se partage avec ceux que tu choisis, et qui se transmet — pour que tes enfants, tes petits-enfants, et même les inconnus que tu n'as jamais rencontrés, puissent lire ce que tu as vécu.</p>
+<p class="body">Ce n'est pas que des mots. Ce sont aussi <em>tes photos, tes voix, tes vidéos, tes objets fétiches, tes lieux, tes recettes, tes chansons</em>. Tout ce qui fait ta couleur. Tout ce qui fait ta sève.</p>
+<p class="body">Parce que la transmission, ce n'est pas l'héritage notarié. C'est <em>le rire qu'on raconte 30 ans après, l'odeur d'une cuisine qu'on retrouve dans un parfum, le geste qu'un petit-fils refait sans savoir d'où il vient</em>.</p>
+<p class="body">NAVLYS NEXT GEN, c'est ta vie qui devient un héritage qu'on peut <em>encore toucher du doigt</em>.</p>
+<div class="signature">BM</div>
+</div></section>
+
+<section class="chemins"><div class="wrap">
+<h2>Les <em>5 chemins</em></h2>
+<p class="intro" style="text-align:center;font-style:italic;color:var(--perle-doux);font-size:clamp(17px,2.3vw,20px);margin-bottom:44px">Une seule application, 5 façons d'entrer dans ta biographie.</p>
+<div class="chemins-grid">
+  <div class="chemin"><div class="num">1</div><h3>La Vie</h3><p>Les grandes étapes de ton parcours : enfance, jeunesse, rencontres, voyages, métiers, épreuves, victoires.</p></div>
+  <div class="chemin"><div class="num">2</div><h3>La Mémoire</h3><p>Les moments qui t'ont fait. Les voix, les visages, les odeurs. Sauvegardés en haute qualité, à vie.</p></div>
+  <div class="chemin"><div class="num">3</div><h3>La Transmission</h3><p>Ce que tu veux léguer. Tes valeurs, tes leçons, tes recettes. Reçus par ceux que tu choisis.</p></div>
+  <div class="chemin"><div class="num">4</div><h3>Le Bien-être</h3><p>Écrire ta vie soigne. Réflexologie, reiki, méditations à puiser dans ton propre récit.</p></div>
+  <div class="chemin"><div class="num">5</div><h3>La Passion</h3><p>Ce qui te fait vibrer aujourd'hui — musique, mer, sport, art, métier. Mis en lumière, partagé.</p></div>
+</div>
+</div></section>
+
+<section class="offre"><div class="wrap">
+<h2>Quatre <em>paliers</em>, à vie</h2>
+<p class="intro">Paiement unique, sans abonnement. Tes contenus restent à toi.</p>
+<div class="paliers">
+  <div class="pal"><b>BIO UNIQUE</b><p>Ta biographie, du début à la fin.</p></div>
+  <div class="pal"><b>FAMILLE</b><p>Plusieurs récits, une lignée.</p></div>
+  <div class="pal"><b>INFINITE</b><p>Sans limite de récits.</p></div>
+  <div class="pal"><b>PRO</b><p>Biographes &amp; professionnels.</p></div>
+</div>
+<p style="text-align:center;color:var(--brume);font-style:italic;font-size:.9rem;margin-top:14px">Tarifs précis communiqués au lancement.</p>
+<div class="center"><a class="cta" href="https://wa.me/972537082746?text=Je%20veux%20cr%C3%A9er%20ma%20biographie%20NAVLYS%20NEXT%20GEN">📞 Réserver sur WhatsApp</a></div>
+</div></section>
+
+<footer><div class="wrap">
+<div class="brand-foot"><span>NAVLYS NEXT GEN</span> — Ta vie, racontée</div>
+<div class="meta-foot">Biographie vivante · Mémoire · Transmission</div>
+<div class="disclaimer">NAVLYS NEXT GEN est un service de biographie vivante à usage personnel et familial. Les contenus que tu déposes restent ta propriété. Stockage sécurisé et transmission selon tes choix. Pas de revente de tes données. Pas de pub.<br><br>© 2026 NAVLYS NEXT GEN · DFENSER par Bruno Mark Partouche · <a href="/mentions-legales">Mentions légales</a></div>
+</div></footer>
+
+<script src="../_shared/navlys-reveal.js" defer></script>
+</body></html>
