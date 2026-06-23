@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>navlys.io — Vitrine live · Famille NAVLYS · Profils · Créations · Partenariats</title>
+<meta name="description" content="navlys.io — La vitrine live de tous nos profils, créations et partenariats. Famille NAVLYS.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2302040a'/><text x='16' y='22' font-size='17' text-anchor='middle' fill='%237DD3FC' font-family='Georgia,serif'>◉</text></svg>">
+<meta property="og:type" content="website">
+<meta property="og:title" content="navlys.io — Vitrine live · Famille NAVLYS">
+<meta property="og:description" content="Profils, créations et partenariats de la famille NAVLYS.">
+<meta property="og:url" content="https://navlys.io/">
+<meta property="og:image" content="https://navlys.io/assets/og-io.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://navlys.io/">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Cormorant+Garamond:ital@0;1&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--noir:#02040a;--bronze:#B87333;--bronze-clair:#D49B5B;--or:#C9A961;--or-pale:#f3e4c4;--ice:#7DD3FC;--ice-clair:#a8e3ff;--perle:#e7eef2;--perle-doux:#bcc9d1;--brume:#7c8b95;--vert:#3a8c5a}
+*{margin:0;padding:0;box-sizing:border-box}
+html{background:#02040a}
+body{background:transparent;color:var(--perle);font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;line-height:1.55;min-height:100vh;-webkit-text-size-adjust:100%;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(55% 45% at 12% 8%,rgba(125,211,252,.13),transparent 60%),radial-gradient(50% 40% at 88% 32%,rgba(184,115,51,.1),transparent 62%),radial-gradient(1100px 880px at 50% 122%,rgba(184,115,51,.16),transparent 64%)}
+.fam-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(2,4,10,.88);backdrop-filter:blur(18px);border-bottom:1px solid rgba(125,211,252,.18);padding:14px 18px;display:flex;justify-content:space-between;align-items:center;animation:pulse 6s ease-in-out infinite alternate}
+@keyframes pulse{0%{box-shadow:0 0 14px rgba(125,211,252,.10)}100%{box-shadow:0 0 28px rgba(125,211,252,.35)}}
+.fam-logo{font-family:'Cinzel',serif;font-size:13px;letter-spacing:.32em;color:var(--or);text-transform:uppercase;font-weight:600}
+.fam-icons{display:flex;gap:10px;align-items:center}
+.fam-icons a{font-size:22px;text-decoration:none;color:var(--ice-clair);padding:4px;transition:.3s}
+.fam-icons a:hover{transform:scale(1.15)}
+.prelude{text-align:center;font-style:italic;font-size:clamp(18px,3.5vw,24px);color:rgba(168,227,255,.92);text-shadow:0 0 14px rgba(125,211,252,.5);padding:84px 20px 14px;position:relative;z-index:5}
+.hero{padding:14px 20px 40px;text-align:center;position:relative;z-index:5}
+.hero .kicker{font-family:'Cinzel',serif;font-size:13px;letter-spacing:.42em;color:var(--ice);text-transform:uppercase;margin-bottom:18px}
+.hero .kicker span{color:var(--or)}
+.brandline{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(54px,12vw,124px);letter-spacing:.13em;text-transform:uppercase;background:linear-gradient(100deg,var(--or-pale),var(--or) 45%,#fff7e6 55%,var(--or) 70%,var(--bronze));background-size:220% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shine 9s linear infinite;margin:14px 0 22px;line-height:1.05;filter:drop-shadow(0 0 18px rgba(184,115,51,.35))}
+@keyframes shine{to{background-position:220% center}}
+.hero h1{font-weight:400;font-size:clamp(26px,4.5vw,40px);line-height:1.2;color:var(--perle);margin:0 auto 20px;max-width:900px}
+.hero h1 em{color:var(--or-pale);font-style:italic}
+.brand-tagline{font-family:'Cinzel',serif;font-size:clamp(14px,3vw,20px);letter-spacing:.3em;color:var(--ice-clair);text-transform:uppercase;font-weight:500;margin:22px auto 30px;padding:12px 20px;border-top:1px solid rgba(125,211,252,.4);border-bottom:1px solid rgba(125,211,252,.4);max-width:760px;text-align:center;line-height:1.4}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px;position:relative;z-index:5}
+section{padding:60px 0;border-top:1px solid rgba(125,211,252,.1)}
+section h2{font-weight:400;font-size:clamp(36px,7vw,58px);line-height:1.05;color:var(--perle);text-align:center;margin-bottom:12px}
+section h2 em{color:var(--or);font-style:italic}
+section .punch{text-align:center;font-style:italic;color:var(--perle-doux);font-size:clamp(18px,3vw,22px);margin:0 auto 40px;max-width:680px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:18px}
+.card{padding:24px;background:rgba(2,4,10,.65);border:1px solid rgba(125,211,252,.22);border-radius:14px;text-decoration:none;color:var(--perle);transition:.4s;position:relative}
+.card:hover{border-color:rgba(125,211,252,.65);transform:translateY(-3px);box-shadow:0 14px 36px rgba(125,211,252,.22)}
+.card .live-dot{position:absolute;top:18px;right:18px;width:9px;height:9px;background:var(--vert);border-radius:50%;animation:lp 1.5s ease infinite;box-shadow:0 0 10px var(--vert)}
+@keyframes lp{0%,100%{opacity:.4}50%{opacity:1}}
+.card .head{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.card .emoji{font-size:34px;line-height:1}
+.card .name{font-family:'Cinzel',serif;font-weight:600;font-size:18px;letter-spacing:.12em;color:var(--or);text-transform:uppercase}
+.card .role{font-family:'Cinzel',serif;font-size:10px;letter-spacing:.25em;color:var(--ice);text-transform:uppercase;margin-top:2px}
+.card .desc{font-style:italic;color:var(--perle-doux);font-size:16px;line-height:1.55;margin-bottom:14px;min-height:48px}
+.card .url{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ice-clair);margin-bottom:10px;display:inline-block;padding:3px 9px;background:rgba(125,211,252,.1);border-radius:8px}
+.card .cta{display:inline-flex;align-items:center;gap:5px;font-family:'Cinzel',serif;font-size:11px;letter-spacing:.2em;color:var(--bronze-clair);text-transform:uppercase;padding:7px 14px;border:1px solid rgba(184,115,51,.35);border-radius:14px;margin-top:6px}
+.card:hover .cta{background:rgba(184,115,51,.15);border-color:var(--bronze-clair)}
+.subhead{font-family:'Cinzel',serif;font-size:13px;letter-spacing:.3em;color:var(--ice);text-transform:uppercase;margin:30px 0 16px;text-align:center}
+footer{padding:40px 20px 70px;text-align:center;border-top:1px solid rgba(184,115,51,.18);position:relative;z-index:5}
+.foot-brand{font-size:20px;color:var(--perle)}.foot-brand span{color:var(--or)}
+.foot-meta{font-family:'Cinzel',serif;font-size:11px;letter-spacing:.25em;color:var(--brume);margin:8px 0 18px;text-transform:uppercase}
+.disclaimer{font-style:italic;color:var(--brume);font-size:13.5px;line-height:1.65;max-width:780px;margin:0 auto;padding:18px;border:1px solid rgba(184,115,51,.18);border-radius:12px;background:rgba(2,4,10,.55)}
+.disclaimer a{color:var(--ice);text-decoration:none}
+@media(prefers-reduced-motion:reduce){*{animation:none !important}}
+@media(max-width:768px){.brandline{font-size:48px;letter-spacing:.1em}.hero h1{font-size:24px}section{padding:36px 0}section h2{font-size:32px}}
+</style></head><body>
+
+<nav class="fam-nav">
+<span class="fam-logo">🌐 navlys.io</span>
+<div class="fam-icons">
+<a href="https://navlys.com" title="🌊 NAVLYS — Méthode 90/10">🌊</a>
+<a href="https://navbiolife.com" title="📖 NAVLYS NEXT GEN — Biographie">📖</a>
+<a href="https://brunopartouche.com" title="⚓ Bruno Mark Partouche">⚓</a>
+</div>
+</nav>
+
+<div class="prelude">il y a bien longtemps, dans une vie lointaine…</div>
+
+<header class="hero">
+<div class="kicker">VITRINE LIVE · <span>Famille NAVLYS</span></div>
+<div class="brandline">NAVLYS.IO</div>
+<h1>Le phare officiel.<br><em>Tous nos profils, créations et partenariats.</em></h1>
+<div class="brand-tagline">Ma méthode · Votre argent · Votre tempo</div>
+</header>
+
+<div class="wrap">
+
+<section id="profils">
+<h2>🌟 Nos <em>profils</em></h2>
+<p class="punch">Les visages humains derrière l'écosystème. Bruno + futurs membres du groupe NAVLYS.</p>
+<div class="grid">
+<a href="https://brunopartouche.com" class="card"><div class="live-dot"></div><div class="head"><span class="emoji">⚓</span><div><div class="name">Bruno Mark Partouche</div><div class="role">FONDATEUR · SKIPPER</div></div></div><div class="desc">Skipper Méditerranée. Finance. Méthode 90/10. L'exemple vivant de tout ce qu'on construit.</div><span class="url">brunopartouche.com</span><br><span class="cta">Voir le profil →</span></a>
+<a href="mailto:bruno@navlys.com" class="card" style="opacity:.55"><div class="head"><span class="emoji">📧</span><div><div class="name">bruno@navlys.com</div><div class="role">DIRECTION GÉNÉRALE</div></div></div><div class="desc">Profil corporate à activer. Email pro pour relations partenaires et direction.</div><span class="url">bruno@navlys.com</span><br><span class="cta">Bientôt en ligne →</span></a>
+<a href="mailto:direction@navlys.com" class="card" style="opacity:.55"><div class="head"><span class="emoji">🎯</span><div><div class="name">direction@navlys.com</div><div class="role">PILOTAGE</div></div></div><div class="desc">Profil corporate à activer. Décisions internes, stratégie produit.</div><span class="url">direction@navlys.com</span><br><span class="cta">Bientôt en ligne →</span></a>
+<a href="mailto:partenaires@navlys.com" class="card" style="opacity:.55"><div class="head"><span class="emoji">🤝</span><div><div class="name">partenaires@navlys.com</div><div class="role">PARTENARIATS</div></div></div><div class="desc">Profil corporate à activer. Brokers, intégrations, programme affiliation.</div><span class="url">partenaires@navlys.com</span><br><span class="cta">Bientôt en ligne →</span></a>
+</div>
+</section>
+
+<section id="creations">
+<h2>🎬 Nos <em>créations</em> live</h2>
+<p class="punch">Les sites produits déjà en production. Chacun = une preuve vivante de notre savoir-faire.</p>
+<div class="grid">
+<a href="https://navlys.com" class="card"><div class="live-dot"></div><div class="head"><span class="emoji">🌊</span><div><div class="name">NAVLYS</div><div class="role">PRODUIT MAÎTRE · ÉDUCATION FINANCE</div></div></div><div class="desc">Méthode 90/10. Veille marchés. Encyclopédie. Paper trading. Communauté privée.</div><span class="url">navlys.com</span><br><span class="cta">Visiter →</span></a>
+<a href="https://navbiolife.com" class="card"><div class="live-dot"></div><div class="head"><span class="emoji">📖</span><div><div class="name">NAVLYS NEXT GEN</div><div class="role">BIOGRAPHIE VIVANTE</div></div></div><div class="desc">Ta vie racontée, gardée, transmise. Photos, voix, textes, lieux, recettes.</div><span class="url">navbiolife.com</span><br><span class="cta">Visiter →</span></a>
+<a href="https://brunopartouche.com" class="card"><div class="live-dot"></div><div class="head"><span class="emoji">⚓</span><div><div class="name">Bruno Partouche</div><div class="role">VITRINE PIVOT PERSONNELLE</div></div></div><div class="desc">Hub personnel de Bruno. Tous les sites famille + partenaires + journal vivant.</div><span class="url">brunopartouche.com</span><br><span class="cta">Visiter →</span></a>
+<a href="https://navlys.io" class="card"><div class="live-dot"></div><div class="head"><span class="emoji">🌐</span><div><div class="name">navlys.io</div><div class="role">VITRINE LIVE + SITE BUILDER IA</div></div></div><div class="desc">Tu es ici. Le phare officiel. Site builder en construction (BETA).</div><span class="url">navlys.io</span><br><span class="cta">Tu y es →</span></a>
+</div>
+</section>
+
+<section id="partenariats">
+<h2>🤝 Nos <em>partenariats</em> actifs</h2>
+<p class="punch">Brokers, banques et outils. Tous testés, tous transparents. Liens d'affiliation visibles.</p>
+
+<h3 class="subhead">📈 Brokers actions &amp; ETF</h3>
+<div class="grid">
+<a href="https://alpaca.markets/" class="card"><div class="head"><span class="emoji">🦙</span><div><div class="name">Alpaca</div><div class="role">API · AFFILIÉ BP001</div></div></div><div class="desc">Broker actions US, 0€ commission, API moderne. Notre préféré dev.</div><span class="cta">Découvrir →</span></a>
+<a href="https://www.etoro.com/" class="card"><div class="head"><span class="emoji">📊</span><div><div class="name">eToro</div><div class="role">AFFILIÉ BP001</div></div></div><div class="desc">Multi-actifs, copy trading, idéal débutant.</div><span class="cta">Découvrir →</span></a>
+<a href="https://www.traderepublic.com/" class="card"><div class="head"><span class="emoji">🇪🇺</span><div><div class="name">Trade Republic</div><div class="role">NÉO-BROKER EU</div></div></div><div class="desc">1€/ordre, ETF DCA gratuits. Européens.</div><span class="cta">Découvrir →</span></a>
+<a href="https://www.boursedirect.fr/" class="card"><div class="head"><span class="emoji">🇫🇷</span><div><div class="name">Bourse Direct</div><div class="role">PEA · PEA-PME · CTO</div></div></div><div class="desc">Référence française optimisation fiscale.</div><span class="cta">Découvrir →</span></a>
+</div>
+
+<h3 class="subhead">🪙 Crypto</h3>
+<div class="grid">
+<a href="https://www.bybit.com/" class="card"><div class="head"><span class="emoji">⚡</span><div><div class="name">Bybit</div><div class="role">API · AFFILIÉ BP001</div></div></div><div class="desc">Spot crypto, API affiliation, frais bas.</div><span class="cta">Découvrir →</span></a>
+<a href="https://www.okx.com/" class="card"><div class="head"><span class="emoji">🔶</span><div><div class="name">OKX</div><div class="role">API · AFFILIÉ BP001</div></div></div><div class="desc">Earn, DEX intégré. Alternative Binance.</div><span class="cta">Découvrir →</span></a>
+<a href="https://www.kraken.com/" class="card"><div class="head"><span class="emoji">🐙</span><div><div class="name">Kraken</div><div class="role">SÉCURITÉ MAX</div></div></div><div class="desc">HODL long terme, sécurité éprouvée depuis 2013.</div><span class="cta">Découvrir →</span></a>
+</div>
+
+<h3 class="subhead">💼 Néo-banques &amp; Cash</h3>
+<div class="grid">
+<a href="https://revolut.com/" class="card"><div class="head"><span class="emoji">💳</span><div><div class="name">Revolut</div><div class="role">AFFILIÉ BP001</div></div></div><div class="desc">Néo-banque multi-devises. Indispensable expat.</div><span class="cta">Découvrir →</span></a>
+<a href="https://www.wise.com/" class="card"><div class="head"><span class="emoji">🌐</span><div><div class="name">Wise</div><div class="role">AFFILIÉ BP001</div></div></div><div class="desc">Transferts internationaux au taux réel.</div><span class="cta">Découvrir →</span></a>
+<a href="https://www.boursobank.com/" class="card"><div class="head"><span class="emoji">🏦</span><div><div class="name">BoursoBank</div><div class="role">BANQUE EN LIGNE FR</div></div></div><div class="desc">Combo banque + courtage français pratique.</div><span class="cta">Découvrir →</span></a>
+</div>
+
+<h3 class="subhead">⚒ Outils &amp; Communauté</h3>
+<div class="grid">
+<a href="https://nas.io/" class="card"><div class="head"><span class="emoji">🌟</span><div><div class="name">Nas.io</div><div class="role">COMMUNAUTÉ PRIVÉE</div></div></div><div class="desc">Là où vit notre communauté NAVLYS premium.</div><span class="cta">Découvrir →</span></a>
+<a href="https://www.notion.so/" class="card"><div class="head"><span class="emoji">🗂</span><div><div class="name">Notion</div><div class="role">AFFILIÉ BP001</div></div></div><div class="desc">Notes, wiki, projets. On centralise tout là.</div><span class="cta">Découvrir →</span></a>
+<a href="https://vercel.com/" class="card"><div class="head"><span class="emoji">▲</span><div><div class="name">Vercel</div><div class="role">AFFILIÉ BP001</div></div></div><div class="desc">Hébergement de tous nos sites. SSL auto, CDN mondial.</div><span class="cta">Découvrir →</span></a>
+<a href="https://stripe.com/" class="card"><div class="head"><span class="emoji">💳</span><div><div class="name">Stripe</div><div class="role">PAIEMENTS</div></div></div><div class="desc">Standard mondial paiements en ligne, abonnements.</div><span class="cta">Découvrir →</span></a>
+</div>
+</section>
+
+<section id="studio">
+<h2>🚀 <em>Studio</em> en cours</h2>
+<p class="punch">Les projets en construction. Visibles en temps réel.</p>
+<div class="grid">
+<div class="card" style="opacity:.75"><div class="head"><span class="emoji">📱</span><div><div class="name">App NAVLYS NEXT GEN — dépôt souvenirs</div><div class="role">EN BUILD · BETA</div></div></div><div class="desc">PWA pour déposer photos, voix, vidéos. Synthèse IA en bio vivante.</div></div>
+<div class="card" style="opacity:.75"><div class="head"><span class="emoji">🤖</span><div><div class="name">App navlys.io site builder</div><div class="role">EN BUILD · BETA</div></div></div><div class="desc">Tu déposes ton brief en vrac, l'IA livre site + app + backoffice.</div></div>
+<div class="card" style="opacity:.75"><div class="head"><span class="emoji">💬</span><div><div class="name">IA Chat universel</div><div class="role">EN ÉTUDE</div></div></div><div class="desc">Assistant IA voix + clavier sur tous les sites. Accessibilité totale.</div></div>
+</div>
+</section>
+
+</div>
+
+<footer>
+<div class="foot-brand"><span>navlys.io</span> · Phare officiel famille NAVLYS</div>
+<div class="foot-meta">Vitrine live · Profils · Créations · Partenariats · Studio</div>
+<div class="disclaimer">navlys.io est la plateforme vitrine live de la famille NAVLYS, opérée par NAVLYS™. Tous les liens marqués « AFFILIÉ BP001 » génèrent une commission pour Bruno Mark Partouche sans surcoût pour toi. Le contenu présenté est éducatif. Aucune des recommandations ne constitue un conseil personnalisé en investissement. © 2026 NAVLYS™ · <a href="/mentions-legales">Mentions légales</a></div>
+</footer>
+
+<script src="../_shared/navlys-reveal.js" defer></script>
+</body></html>
