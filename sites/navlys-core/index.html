@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NAVLYS — Un cerveau. Une personne. Tout un univers.</title>
+<meta name="description" content="NAVLYS CORE, le cerveau central, et son univers d'applications IA + humaines : Finance, NAVLYS NEXT GEN, NAVLEX, Influenceurs, Journal de l'IA, Radio. Teste gratuitement, 0 €.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2305060a'/><circle cx='16' cy='16' r='7' fill='none' stroke='%235fe0ff' stroke-width='2'/><circle cx='16' cy='16' r='2.5' fill='%23e9d3a0'/></svg>">
+<meta property="og:type" content="website">
+<meta property="og:title" content="NAVLYS — Un cerveau. Une personne. Tout un univers.">
+<meta property="og:description" content="NAVLYS CORE et son univers d'applications IA + humaines. Teste gratuitement, 0 €.">
+<meta property="og:url" content="https://navlys.com/">
+<meta property="og:image" content="https://navlys.com/assets/og-core.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://navlys.com/">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Fraunces:ital,wght@1,400;1,500&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--noir:#05060a;--ice:#5fe0ff;--or:#e9d3a0;--rouge:#ff2a1f;--vin:#7a1f2b;--perle:#eef0f6;--mut:#9fb3c8}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--noir)}
+body{font-family:'Lora',serif;color:var(--perle);background:var(--noir);line-height:1.6;overflow-x:hidden;-webkit-text-size-adjust:100%}
+.bg{position:fixed;inset:0;z-index:-2;background:radial-gradient(900px 620px at 84% -8%,rgba(233,211,160,.12),transparent 60%),radial-gradient(840px 600px at 6% 6%,rgba(95,224,255,.13),transparent 60%),radial-gradient(1100px 880px at 50% 120%,rgba(122,31,43,.40),transparent 64%),var(--noir)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header.top{padding:26px 0 4px;display:flex;align-items:center;gap:12px}
+.led{width:15px;height:15px;border-radius:50%;background:radial-gradient(circle at 50% 38%,#bdf3ff,var(--ice) 60%,rgba(95,224,255,.1));box-shadow:0 0 18px var(--ice);animation:b 4.6s ease-in-out infinite}
+@keyframes b{0%,100%{opacity:.5;transform:scale(.85)}50%{opacity:1;transform:scale(1.18)}}
+.logo{font-family:'Cormorant Garamond';letter-spacing:6px;font-size:1.5rem;color:#fff}
+nav.top{margin-left:auto;display:flex;gap:16px;flex-wrap:wrap}
+nav.top a{color:var(--mut);text-decoration:none;font-family:'Fraunces';font-style:italic;font-size:.95rem}
+nav.top a:hover{color:var(--ice)}
+.intro{text-align:center;font-family:'Fraunces';font-style:italic;color:var(--or);font-size:clamp(.95rem,2.3vw,1.18rem);max-width:760px;margin:26px auto 0;opacity:.92}
+.intro .core{color:#fff;font-style:normal;font-family:'Cormorant Garamond';letter-spacing:3px}
+.offer{display:block;text-align:center;margin:18px auto 0;max-width:560px;font-family:'Fraunces';font-style:italic;font-size:.92rem;color:#05060a;background:linear-gradient(100deg,var(--or),#fff6df);border-radius:999px;padding:8px 18px;text-decoration:none}
+.offer b{font-style:normal}
+/* EMBLÈME CORE (léger, CSS pur) */
+.core-stage{display:flex;justify-content:center;margin:30px 0 6px}
+.core{position:relative;width:min(360px,80vw);aspect-ratio:1}
+.ring{position:absolute;inset:0;border-radius:50%;border:1px solid rgba(95,224,255,.22)}
+.ring.r2{inset:14%;border-color:rgba(233,211,160,.20)}
+.ring.r3{inset:28%;border-color:rgba(95,224,255,.28)}
+.ring.spin{animation:spin 24s linear infinite}
+.ring.spin.rev{animation-direction:reverse;animation-duration:32s}
+@keyframes spin{to{transform:rotate(360deg)}}
+.ring .dot{position:absolute;top:-5px;left:50%;width:10px;height:10px;margin-left:-5px;border-radius:50%;background:var(--ice);box-shadow:0 0 12px var(--ice)}
+.ring.r2 .dot{background:var(--or);box-shadow:0 0 12px var(--or)}
+.nucleus{position:absolute;inset:38%;border-radius:50%;background:radial-gradient(circle at 40% 35%,#fff,var(--ice) 45%,#123048 100%);box-shadow:0 0 50px rgba(95,224,255,.5),0 0 90px rgba(122,31,43,.4);animation:pulse 4.6s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(.92);opacity:.85}50%{transform:scale(1.06);opacity:1}}
+.nucleus span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond';font-weight:700;color:#06222f;font-size:clamp(.7rem,2.2vw,1rem);letter-spacing:2px}
+.tagline{text-align:center;color:var(--mut);font-size:clamp(1rem,2.6vw,1.18rem);max-width:600px;margin:14px auto 0}
+.tagline b{color:#fff}
+h2.section{font-family:'Cormorant Garamond';font-weight:600;color:#fff;font-size:clamp(1.6rem,4vw,2.1rem);margin:56px 0 6px;text-align:center}
+.lead{color:var(--mut);font-family:'Fraunces';font-style:italic;margin:0 auto 24px;max-width:640px;text-align:center}
+/* GRILLE ÉCOSYSTÈME */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:16px}
+.cell{position:relative;overflow:hidden;border-radius:20px;padding:24px;min-height:158px;text-decoration:none;color:var(--perle);
+  background:linear-gradient(160deg,rgba(95,224,255,.07),rgba(10,12,20,.66));border:1px solid rgba(95,224,255,.18);transition:.25s;display:flex;flex-direction:column;justify-content:flex-end}
+.cell:hover{transform:translateY(-4px);border-color:var(--ice);box-shadow:0 16px 44px rgba(0,0,0,.45)}
+.cell .ic{font-size:2rem;margin-bottom:8px}
+.cell h3{font-family:'Cormorant Garamond';color:#fff;font-size:1.5rem;margin:0}
+.cell p{color:var(--mut);font-size:.92rem;margin:4px 0 0}
+.cell .tag{position:absolute;top:14px;right:14px;font-family:'Fraunces';font-style:italic;font-size:.7rem;color:#05060a;background:linear-gradient(100deg,var(--or),#fff6df);border-radius:999px;padding:2px 10px}
+.mission{margin:56px auto 0;border-left:3px solid var(--ice);padding:8px 0 8px 22px;max-width:720px}
+.q{font-family:'Fraunces';font-style:italic;color:var(--or);font-size:1.15rem;margin:26px 0}
+footer{margin:60px 0 40px;border-top:1px solid rgba(255,255,255,.08);padding-top:22px;color:#8fa6c8;font-size:.82rem}
+footer .flag{letter-spacing:3px;margin-bottom:10px}
+.disc{font-style:italic;line-height:1.7;max-width:780px}
+a.inline{color:var(--ice);text-decoration:none}
+@media(prefers-reduced-motion:reduce){*{animation:none !important}}
+</style></head><body>
+<div class="bg"></div>
+<div class="wrap">
+  <header class="top">
+    <span class="led"></span><span class="logo">NAVLYS</span>
+    <nav class="top">
+      <a href="/finance">Finance</a>
+      <a href="/next-gen">Next Gen</a>
+      <a href="/navlex">NAVLEX</a>
+      <a href="/bientot">Influenceurs</a>
+      <a href="/bientot">Journal IA</a>
+      <a href="/bientot">Radio</a>
+    </nav>
+  </header>
+
+  <p class="intro">Il y a bien longtemps… l'IA n'existait pas… Mais ça, c'était avant. <span class="core">NAVLYS CORE</span></p>
+  <a class="offer" href="#preinscription">🎁 <b>Télécharge &amp; teste GRATUITEMENT — 0 €</b> · essai libre et gratuit</a>
+
+  <div class="core-stage">
+    <div class="core">
+      <div class="ring spin"><span class="dot"></span></div>
+      <div class="ring r2 spin rev"><span class="dot"></span></div>
+      <div class="ring r3 spin"></div>
+      <div class="nucleus"><span>CORE</span></div>
+    </div>
+  </div>
+  <p class="tagline">Un cerveau. Une personne. <b>Tout un univers.</b><br>L'IA est le vent, c'est toi qui tiens la barre.</p>
+
+  <section id="ecosysteme">
+    <h2 class="section">L'univers NAVLYS</h2>
+    <p class="lead">Chaque application — un monde vivant, animé, différent. Deux apps réelles, gratuites à tester (0 €).</p>
+    <div class="grid">
+      <a class="cell" href="/finance"><span class="tag">GRATUIT · 0 €</span><div class="ic">🧮</div><h3>Finance</h3><p>Éducation &amp; veille, en euros. Méthode 90/10.</p></a>
+      <a class="cell" href="/next-gen"><span class="tag">GRATUIT · 0 €</span><div class="ic">📖</div><h3>NAVLYS NEXT GEN</h3><p>Ton livre, ton film de vie.</p></a>
+      <a class="cell" href="/navlex"><span class="tag">9,99 € HT</span><div class="ic">⚖️</div><h3>NAVLEX</h3><p>Le droit, simplement.</p></a>
+      <a class="cell" href="/bientot"><div class="ic">✨</div><h3>Influenceurs</h3><p>Le Journal.</p></a>
+      <a class="cell" href="/bientot"><div class="ic">🤖</div><h3>Journal IA</h3><p>Le décryptage tech.</p></a>
+      <a class="cell" href="/bientot"><div class="ic">📻</div><h3>Radio</h3><p>L'ambiance NAVLYS.</p></a>
+      <a class="cell" href="https://navlys.io"><div class="ic">🛎️</div><h3>Concierge</h3><p>navlys.io · bientôt.</p></a>
+      <a class="cell" href="/bientot"><div class="ic">🪙</div><h3>Partenaires</h3><p>Binance · Bybit · OKX · Plus500 · Alpaca.</p></a>
+    </div>
+  </section>
+
+  <section id="preinscription">
+    <h2 class="section">Réserve ta place — accès anticipé <span style="color:var(--or)">GRATUIT</span></h2>
+    <p class="lead">Inscris-toi : tu fais partie des premiers à tester NAVLYS. Zéro spam, désinscription à tout moment, tes données t'appartiennent.</p>
+    <div style="text-align:center"><a class="offer" style="display:inline-block" href="https://wa.me/972537082746?text=Je%20veux%20r%C3%A9server%20ma%20place%20NAVLYS"><b>📞 Réserver ma place sur WhatsApp</b></a></div>
+  </section>
+
+  <section class="mission" id="mission">
+    <h2 class="section" style="text-align:left;margin-top:0">Notre mission</h2>
+    <p>Mettre l'IA à la portée de tous, en un clic et à la voix — pour égaliser l'accès au savoir, au bien-être et à la transmission. L'humain reste la pièce centrale.</p>
+    <p class="q">« L'IA est le vent, c'est toi qui tiens la barre. »</p>
+    <p>NAVLYS, c'est aussi un choix de vie : <b>100 % dématérialisé</b> — zéro bureau, zéro transport, zéro papier, dans le respect de la mer Méditerranée qui nous porte.</p>
+  </section>
+
+  <footer>
+    <div class="flag">🌊 ⚓ NAVLYS 🪝</div>
+    <p class="disc">NAVLYS est un projet d'<b>éducation et de veille à vocation informative uniquement</b>. Les contenus ne constituent en aucun cas un conseil personnalisé en investissement. Chacun reste seul responsable de ses décisions financières. Tous les tarifs sont indiqués <b>HT</b>. Réservé aux 18 ans et +. Tes contenus restent privés par défaut et t'appartiennent.</p>
+    <p style="margin-top:12px">© 2026 NAVLYS · <a class="inline" href="/finance">Finance</a> · <a class="inline" href="/next-gen">Next Gen</a> · <a class="inline" href="/navlex">NAVLEX</a> · <a class="inline" href="/mentions-legales">Mentions légales</a></p>
+  </footer>
+</div>
+<script src="../_shared/navlys-reveal.js" defer></script>
+</body></html>
