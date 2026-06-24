@@ -58,3 +58,7 @@ make("sites/navlys/assets/bg-1.jpg", "EDUCATION · VEILLE",
      "NAVLYS", "La methode 90/10.", ICE)
 make("sites/navlys-io/assets/og-io.jpg", "VITRINE LIVE · FAMILLE NAVLYS",
      "NAVLYS.IO", "Profils · Creations · Partenariats.", OR)
+
+# navbiolife (NAVLYS NEXT GEN) — prêt pour le merge de la PR #11
+make("sites/navbiolife/assets/og-nextgen.jpg", "BIOGRAPHIE VIVANTE · MEMOIRE · TRANSMISSION",
+     "NAVLYS NEXT GEN", "Ta vie, racontee. Gardee. Transmise.", OR)
