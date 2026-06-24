@@ -5,7 +5,7 @@
 
 ## 1. Garde-fous automatiques (CI — déjà actifs)
 À chaque PR / push sur `main`, GitHub Actions vérifie :
-- **Secret scan** (`scripts/check_secrets.py`) : la PR **échoue** si une clé privée, un token (GitHub, AWS, Slack, Stripe, Google) ou un fichier `.env` / `.pem` / `.key` est commis. Le dépôt est **public** → aucun secret ne doit y entrer.
+- **Secret scan** (`scripts/check_secrets.py`) : la PR **échoue** si une clé privée, un token (GitHub, AWS, Slack, Stripe, Google, **OpenAI/Anthropic**, **Supabase `service_role`**) ou un fichier `.env` / `.pem` / `.key` est commis. Le dépôt est **public** → aucun secret ne doit y entrer. *(Les clés Supabase `anon`, publiques par conception, restent autorisées — le JWT est décodé pour distinguer `anon` de `service_role`.)*
 - **Anti-NAVBIO**, **HTML valide**, **liens internes (anti-404)** (workflow `Sites check`).
 
 ## 2. Authentification à 2 niveaux (2FA) — À ACTIVER (action manuelle, une fois par compte)
