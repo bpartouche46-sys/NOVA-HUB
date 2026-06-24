@@ -24,13 +24,15 @@ jobs:
             sites/_shared/navlys-family-theme.css \
             sites/_shared/hero-bg-slideshow.js \
             sites/_shared/navlys-fond.js \
+            sites/_shared/navlys-reveal.js \
+            index.html \
             sites/brunopartouche/biographie.html ; do
             test -f "$f" && echo "OK   $f" || { echo "MANQUE $f"; exit 1; }
           done
 
       - name: Vérifier que NAVBIO a bien été renommé en NAVLYS NEXT GEN
         run: |
-          if grep -rln --include='*.html' -e 'NAVBIO' sites/ ; then
+          if grep -rln --include='*.html' -e 'NAVBIO' . ; then
             echo "::error::Occurrence(s) de 'NAVBIO' restante(s) — renommer en 'NAVLYS NEXT GEN'."
             exit 1
           fi
@@ -42,7 +44,7 @@ jobs:
           while IFS= read -r f; do
             grep -qi '<html' "$f" && grep -qi '</html>' "$f" \
               && echo "OK   $f" || { echo "HTML invalide: $f"; exit 1; }
-          done < <(find sites -name '*.html')
+          done < <(find . -name '*.html' -not -path './.git/*')
 
       - name: Vérifier les liens internes (anti-404)
         run: python3 scripts/check_internal_links.py

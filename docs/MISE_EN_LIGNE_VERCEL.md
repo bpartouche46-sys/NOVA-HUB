@@ -1,67 +1,66 @@
-# Connecter NOVA-HUB à Vercel (déploiement automatique)
+# Connecter NOVA-HUB à Vercel (1 seul projet racine)
 
 > But : passer du déploiement manuel (Vercel CLI) à **GitHub → Vercel → déploiement auto**.
-> À faire **une seule fois**. Ensuite, chaque merge sur `main` = mise en ligne automatique.
+> Modèle choisi : **UN seul projet Vercel** à la racine du dépôt, qui sert **tous les sites**.
+> Le routage par domaine est géré par `vercel.json` (à la racine) — rien à configurer site par site.
 
 ---
 
-## ⚠️ À lire avant tout — quel site peut être connecté ?
+## Comment ça marche
+- **Root Directory = racine du dépôt** (pas `sites/...`).
+- Le `vercel.json` racine route **chaque domaine vers son dossier** :
 
-Connecter un domaine à ce dépôt fait que le domaine servira **la version du dépôt**.
-Or le contenu du dépôt ne correspond pas toujours au site actuellement en ligne :
+| Domaine | Dossier servi |
+|---|---|
+| `brunopartouche.com` (+ www) | `sites/brunopartouche/` |
+| `navlys.com` (+ www) | `sites/navlys-core/` |
+| `navbiolife.com` / `navbiolive.com` | `sites/navbiolife/` |
+| `navlys.io` (+ www) | `sites/navlys-io/` |
+| (n'importe quel domaine) `/_shared/…` | `sites/_shared/…` |
 
-| Domaine live | Contenu actuellement en ligne | Contenu dans ce dépôt | Basculer le domaine ? |
-|---|---|---|---|
-| **brunopartouche.com** | landing animée (1 page) | site multi-pages animé (accueil, bio, parcours, univers, journal, NAVLYS NEXT GEN, démo) | ✅ Oui — version dépôt plus riche |
-| **navlys.com** | **NAVLYS CORE** (univers IA : Finance, NAVLEX, Next Gen, Radio…) | méthode 90/10 (4 pages, plus simple) | ❌ **NON** — ne pas écraser le live |
-
-> 👉 On connecte **brunopartouche** en premier. Pour navlys.com, on **n'écrase rien** :
-> le dossier `sites/navlys` reste un brouillon tant qu'on n'a pas reconstruit l'univers complet.
+- L'URL d'aperçu `…vercel.app` (sans domaine attaché) affiche le **hub racine** (`index.html`).
+- Le dossier `sites/navlys` (brouillon 90/10) est en **noindex** et n'est routé par aucun domaine — il ne sert pas.
 
 ---
 
-## Méthode sûre : aperçu d'abord, bascule ensuite
+## Étapes (une seule fois)
 
-### Étape 1 — Créer un projet d'aperçu (ne touche pas la prod)
+### 1. Importer le dépôt
 1. **vercel.com** → équipe **NAVLYS** → **Add New → Project**.
-2. **Import Git Repository** → `bpartouche46-sys/NOVA-HUB`
-   (si demandé, autoriser Vercel à accéder au dépôt).
+2. **Import Git Repository** → `bpartouche46-sys/NOVA-HUB` (autoriser l'accès si demandé).
 3. **Configure Project** :
-   - **Root Directory** → `sites/brunopartouche`
-   - **Framework Preset** → **Other** (site statique, aucun build)
-   - **Project Name** → ex. `brunopartouche-hub` (nom différent de l'existant)
-4. **Deploy**.
-5. Vercel donne un lien **`https://brunopartouche-hub-xxxx.vercel.app`** → **clique pour voir le rendu animé**.
+   - **Root Directory** → **laisser la racine** (ne PAS mettre `sites/...`).
+   - **Framework Preset** → **Other** (statique, aucun build).
+   - **Project Name** → ex. `navlys-hub`.
+4. **Deploy** → lien `…vercel.app` : tu vois le **hub** (les 4 mondes).
 
-### Étape 2 — Vérifier l'aperçu
-Ouvre sur le lien `.vercel.app` :
-- `/` → accueil animé · `/demo-animee` → cadres vidéo + scroll
-- `/biographie`, `/parcours`, `/univers`, `/journal`, `/navlys-next-gen`, `/mentions-legales`
+### 2. Vérifier l'aperçu
+Sur le lien `.vercel.app` :
+- `/` → hub racine.
+- Les pages d'un site se voient en direct via `/sites/<site>/…` (ex. `/sites/brunopartouche/biographie`).
+  > Note : sur l'URL d'aperçu, les liens internes d'un site (`/biographie`, `/parcours`) ne pointent juste que sur le bon domaine **une fois le domaine attaché** (étape 3) — c'est normal.
 
-Les vidéos restent en **placeholder** tant que les fichiers ne sont pas déposés (voir plus bas).
+### 3. Attacher les domaines (quand l'aperçu te convient)
+Dans le projet → **Settings → Domains → Add** :
+- `brunopartouche.com` + `www.brunopartouche.com`
+- `navlys.com` + `www.navlys.com`  *(⚠️ vérifie d'abord que `sites/navlys-core` correspond bien à ton NAVLYS CORE live avant d'attacher ce domaine)*
+- `navbiolife.com`, `navbiolive.com`
+- `navlys.io` + `www.navlys.io`
 
-### Étape 3 — Basculer le domaine (seulement quand l'aperçu te convient)
-Quand tu valides le rendu :
-1. Dans le **nouveau projet** `brunopartouche-hub` → **Settings → Domains** → **Add** `brunopartouche.com` (+ `www`).
-2. Vercel demandera de **retirer le domaine de l'ancien projet** `brunopartouche` → confirme.
-3. Le domaine pointe désormais sur la version du dépôt. ✅ Auto-déploiement actif.
+Vercel demandera de retirer chaque domaine de son **ancien projet** → confirme.
+Le `vercel.json` route alors automatiquement chaque domaine vers son dossier. ✅ Auto-déploiement actif.
 
-> Tant que tu ne fais pas l'étape 3, **brunopartouche.com reste inchangé** : aucun risque.
+> Tant que tu n'attaches pas un domaine, le site live correspondant **reste inchangé**.
 
 ---
 
-## Après connexion : le cycle automatique
-- Chaque **merge sur `main`** → Vercel déploie tout seul.
-- Chaque **PR** → Vercel crée un **lien de preview** automatique (pratique pour valider avant merge).
-- **Ne plus déployer via CLI** sur ce projet (sinon conflit avec le Git).
+## Après connexion
+- Chaque **merge sur `main`** → déploiement automatique.
+- Chaque **PR** → **lien de preview** automatique.
+- **Ne plus déployer via CLI** sur ces domaines (sinon conflit avec le Git).
 
-## Assets à déposer (pour les vidéos / fonds)
-Dans `sites/brunopartouche/assets/` :
-- `navlys-bateau.mp4`, `ecusson.png`, `bg-1.jpg` (fond unifié + poster)
-- `clip-1.mp4` … `clip-6.mp4` (cadres de la démo `/demo-animee`)
+## Assets à déposer
+Dans `sites/<site>/assets/` : vidéos (`navlys-bateau.mp4`, `clip-1..6.mp4`), `ecusson.png`, `bg-1.jpg`, et les images Open Graph (`og-*.jpg`).
 
-## Plus tard — navlys.io, navbiolife, et le vrai navlys.com
-Ces sites ne sont **pas encore** reconstruits dans le dépôt. Quand ils le seront
-(un dossier `sites/<site>` par site), on répétera l'**étape 1-2-3** pour chacun.
-Pour navlys.com en particulier, il faudra d'abord **porter l'univers NAVLYS CORE**
-dans le dépôt avant d'envisager toute bascule de domaine.
+## Vérifier le routage (après 1er déploiement)
+Le routage par domaine (`vercel.json`) ne peut se tester qu'**une fois un domaine attaché**. Si une page d'un site ne charge pas son thème/animation, vérifier que la requête `https://<domaine>/_shared/navlys-fond.js` renvoie bien le fichier (et non une 404) — c'est le signe que le rewrite `/_shared` fonctionne.

@@ -1,0 +1,13 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/_shared/:path*", "destination": "/sites/_shared/:path*" },
+
+    { "source": "/:path*", "has": [{ "type": "host", "value": "(?:www\\.)?brunopartouche\\.com" }], "destination": "/sites/brunopartouche/:path*" },
+    { "source": "/:path*", "has": [{ "type": "host", "value": "(?:www\\.)?navlys\\.com" }], "destination": "/sites/navlys-core/:path*" },
+    { "source": "/:path*", "has": [{ "type": "host", "value": "(?:www\\.)?navbiolife\\.com" }], "destination": "/sites/navbiolife/:path*" },
+    { "source": "/:path*", "has": [{ "type": "host", "value": "(?:www\\.)?navbiolive\\.com" }], "destination": "/sites/navbiolife/:path*" },
+    { "source": "/:path*", "has": [{ "type": "host", "value": "(?:www\\.)?navlys\\.io" }], "destination": "/sites/navlys-io/:path*" }
+  ]
+}
