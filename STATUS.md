@@ -39,7 +39,7 @@
 ```bash
 python3 scripts/check_internal_links.py
 python3 scripts/check_secrets.py
-grep -rln --include='*.html' -e 'NAVBIO' .   # doit ne rien renvoyer
+grep -riln --include='*.html' -e 'NAVBIO' .  # doit ne rien renvoyer
 ```
 
 ## 4) Intégration Claude Code (GitHub Actions)
