@@ -8,7 +8,7 @@
 - ✅ Routage multi-domaines actif par host :
   - `brunopartouche.com` → `sites/brunopartouche/`
   - `navlys.com` → `sites/navlys-core/` (**core central NAVLYS**)
-  - `navbiolife.com` / `navbiolive.com` → `sites/navbiolife/`
+  - `navbiolife.com` (+ alias `navbiolive.com`) → `sites/navbiolife/`
   - `navlys.io` → `sites/navlys-io/`
   - `/_shared/*` → `sites/_shared/*`
 - ✅ `cleanUrls: true` et `trailingSlash: false` au niveau racine.
