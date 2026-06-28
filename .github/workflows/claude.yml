@@ -3,7 +3,9 @@ name: Claude
 # Permet de mentionner @claude dans une issue ou une PR pour déclencher Claude Code.
 # Pré-requis (à faire UNE fois, côté GitHub) :
 #   1. Installer l'app : https://github.com/apps/claude  (admin du dépôt requis)
-#   2. Ajouter le secret de dépôt  ANTHROPIC_API_KEY  (console.anthropic.com)
+#   2. Générer un jeton d'abonnement en local :  claude setup-token
+#   3. Ajouter le secret de dépôt  CLAUDE_CODE_OAUTH_TOKEN  (= le jeton généré)
+#      → Settings ▸ Secrets and variables ▸ Actions ▸ Repository secrets
 on:
   issue_comment:
     types: [created]
@@ -36,4 +38,4 @@ jobs:
       - name: Claude Code
         uses: anthropics/claude-code-action@v1
         with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
