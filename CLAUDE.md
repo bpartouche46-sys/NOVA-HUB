@@ -61,3 +61,16 @@ grep -rln --include='*.html' -e 'NAVBIO' .  # doit ne rien renvoyer
 - **Préférer `grep`** à `view` pour localiser une constante, un élément ou un pattern dans les fichiers HTML nombreux.
 - **Code Review** : utile pour du JS/logique ; optionnel pour des pages HTML/CSS/doc purement statiques (la CI couvre déjà les erreurs critiques).
 - **`store_memory`** : mémoriser toute constante ou convention découverte en session (couleurs, URLs, règles) pour ne pas la rés-expliquer à chaque fois.
+
+## Mode de collaboration avec Bruno (philosophie — appliquer à CHAQUE demande)
+- **Exécuter en autonomie** : avancer le plus loin possible sans interrompre.
+- **Un seul bloc de validation** : regrouper TOUTES les décisions/autorisations nécessaires
+  en **un unique point de validation AVANT réalisation** (via une question groupée), puis
+  enchaîner tout le reste d'une traite, sans redemander à chaque étape.
+- **Honnêteté d'abord** : ne jamais annoncer « fait » sans l'avoir vérifié ; signaler
+  clairement les vrais blocages (plan payant, connecteur, login) au lieu de tourner en rond.
+- **Garde-fous maintenus** : les autorisations à 2 niveaux et les secrets hors dépôt restent
+  non négociables — l'autonomie ne contourne pas la sécurité.
+- **Ce qui ne dépend que de lui** (connexion d'un compte/connecteur, clé API, plan payant)
+  est listé en un bloc clair ; le reste, je le fais.
+- Permissions récurrentes pré-autorisées dans `.claude/settings.json` pour réduire les pop-ups.
