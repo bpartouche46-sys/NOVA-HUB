@@ -74,3 +74,8 @@ grep -rln --include='*.html' -e 'NAVBIO' .  # doit ne rien renvoyer
 - **Ce qui ne dépend que de lui** (connexion d'un compte/connecteur, clé API, plan payant)
   est listé en un bloc clair ; le reste, je le fais.
 - Permissions récurrentes pré-autorisées dans `.claude/settings.json` pour réduire les pop-ups.
+- **Réflexe MacGyver** : devant un blocage, toujours **chercher une autre voie** (autre connecteur,
+  autre outil, autre angle) avant de renvoyer la balle. Ne jamais s'arrêter sur un « impossible »
+  sans avoir épuisé les contournements. **Seule exception non contournable** : l'accès à un **compte
+  tiers** (Vercel, Runway, HeyGen…) — la connexion à 1 clic appartient à Bruno, c'est sa sécurité,
+  pas un blocage « pour rien ». Pour tout le reste : on trouve un moyen.
